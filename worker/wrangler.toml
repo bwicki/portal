@@ -1,0 +1,11 @@
+# portal-api – Statusprüfung der Apps (Cloudflare Worker, ohne Datenbank, ohne Secrets)
+# Deploy: automatisch über GitHub Actions («Deploy worker»), siehe SETUP.md
+name = "portal-api"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGINS = "https://portal.wicki.aero,https://bwicki.github.io,http://localhost:8080,http://127.0.0.1:8080"
+DOMAIN = "wicki.aero"
+APP_VERSION = "0.1.0"

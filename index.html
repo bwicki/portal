@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portal – Wicki Aero</title>
+  <meta name="description" content="Zugang zu allen Ballon-WebApps von Balthasar Wicki">
+  <meta name="theme-color" content="#16324f">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt</a>
+  <header class="top">
+    <div class="wrap top-in">
+      <img class="logo" src="img/wicki-logo.png" alt="Wicki Partners Ballonteam" width="118" height="40">
+      <div class="title">
+        <span class="h">Portal</span>
+        <button class="ver" id="ver" type="button" title="Versionshinweise">v0.1.0</button>
+      </div>
+      <span class="grow"></span>
+      <div class="lang" role="group" aria-label="Sprache / Language">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="intro">
+      <div class="intro-text">
+        <h1 data-i18n="h1">Ballon-Apps</h1>
+        <p class="lead" data-i18n="lead">Alle Werkzeuge für Planung, Fahrt und Auswertung an einem Ort.</p>
+      </div>
+      <div class="search">
+        <label for="q" class="sr" data-i18n="search">App suchen</label>
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="App suchen  ( / )" data-i18n-ph="searchPh">
+      </div>
+    </div>
+
+    <section class="statusbar" aria-live="polite">
+      <span class="led" id="sumLed" aria-hidden="true"></span>
+      <span class="st"><span id="sumText">Status wird geprüft …</span> <span class="dim mono" id="sumTime"></span></span>
+      <button type="button" class="iconbtn" id="refresh" aria-label="Status neu prüfen" data-i18n-aria="refresh">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+      </button>
+    </section>
+
+    <section class="quick" id="quick" hidden>
+      <h2 class="label" data-i18n="quick">Schnellzugriff</h2>
+      <div class="chips" id="chips"></div>
+    </section>
+
+    <p class="empty" id="empty" hidden data-i18n="none">Keine App gefunden.</p>
+
+    <div class="phases" id="phases"></div>
+
+    <section class="card news">
+      <h2 data-i18n="news">Neu &amp; geändert</h2>
+      <ol class="newslist" id="news"><li class="dim" data-i18n="newsLoading">wird geladen …</li></ol>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span>portal <span class="mono" id="footVer">v0.1.0</span> · <a href="https://github.com/bwicki/portal">github.com/bwicki/portal</a></span>
+    <span>© Balthasar Wicki, Wicki Aero GmbH – <span data-i18n="rights">alle Rechte vorbehalten</span></span>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

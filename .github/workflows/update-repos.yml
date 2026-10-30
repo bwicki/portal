@@ -1,0 +1,39 @@
+# Führt «Neu & geändert» und die Versionsangaben nach (data/repos.json).
+# Läuft stündlich, bei Änderungen an apps.json und von Hand (Actions → «Update repos» → Run workflow).
+# Braucht keine Secrets. Committet nur, wenn sich etwas geändert hat.
+# Hinweis: GitHub pausiert zeitgesteuerte Workflows nach 60 Tagen ohne Aktivität im Repository –
+# dann unter Actions → «Update repos» → «Enable workflow» wieder einschalten.
+name: Update repos
+on:
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    branches: [main]
+    paths: ['apps.json', 'scripts/update-repos.mjs', '.github/workflows/update-repos.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: update-repos
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: data/repos.json erzeugen
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/update-repos.mjs
+      - name: Committen (nur bei Änderung)
+        run: |
+          git config user.name 'portal-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/repos.json
+          if git diff --cached --quiet; then echo "keine Änderung"; exit 0; fi
+          git commit -m "data: repos.json $(date -u +%FT%TZ)"
+          git pull --rebase
+          git push

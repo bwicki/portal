@@ -1,0 +1,50 @@
+# Deployt den Status-Worker «portal-api» bei jeder Änderung unter worker/ oder an apps.json,
+# und von Hand (Actions → «Deploy worker» → Run workflow).
+# Benötigt die Repository-Secrets CLOUDFLARE_API_TOKEN und CLOUDFLARE_ACCOUNT_ID
+# (dieselben Werte wie im Repository bwicki/ops; siehe SETUP.md).
+name: Deploy worker
+on:
+  push:
+    branches: [main]
+    paths: ['worker/**', 'apps.json', '.github/workflows/deploy-worker.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Secrets vorhanden?
+        env:
+          T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          A: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          [ -n "$T" ] || { echo "::error::Repository-Secret CLOUDFLARE_API_TOKEN fehlt – siehe SETUP.md"; exit 1; }
+          [ -n "$A" ] || { echo "::error::Repository-Secret CLOUDFLARE_ACCOUNT_ID fehlt – siehe SETUP.md"; exit 1; }
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Deploy
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: worker
+          command: deploy
+      - name: Gesundheitsprüfung
+        run: |
+          url=$(printf '%s' '${{ steps.deploy.outputs.deployment-url }}' | grep -oE 'https://[a-z0-9.-]+\.workers\.dev' | head -1)
+          [ -n "$url" ] || url='https://portal-api.balthasar.workers.dev'
+          sleep 5
+          echo "Worker: $url"
+          curl -sS --max-time 20 "$url/api/health"; echo
+          curl -sS --max-time 30 "$url/api/status" | head -c 1500; echo
+          {
+            echo "## portal-api deployt"
+            echo "* Adresse: $url"
+            echo "* Prüfung: $url/api/status"
+            echo
+            echo "Steht in js/config.js unter statusApi eine andere Adresse, dort $url eintragen."
+          } >> "$GITHUB_STEP_SUMMARY"
