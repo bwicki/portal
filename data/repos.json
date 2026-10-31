@@ -1,10 +1,14 @@
 {
- "generated": "2026-10-30T23:37:07.386Z",
+ "generated": "2026-10-31T04:07:09.077Z",
  "repos": {
   "bwicki/gafor": {
    "version": null,
-   "pushed": "2026-10-30T20:42:45Z",
+   "pushed": "2026-10-31T00:08:19Z",
    "commits": [
+    {
+     "date": "2026-10-31T00:08:18Z",
+     "msg": "DWD-Berichte 2026-10-31 00:08 UTC"
+    },
     {
      "date": "2026-10-30T20:42:44Z",
      "msg": "DWD-Berichte 2026-10-30 20:42 UTC"
@@ -20,10 +24,6 @@
     {
      "date": "2026-10-30T02:32:48Z",
      "msg": "DWD-Berichte 2026-10-30 02:32 UTC"
-    },
-    {
-     "date": "2026-10-29T22:54:38Z",
-     "msg": "DWD-Berichte 2026-10-29 22:54 UTC"
     }
    ]
   },
@@ -41,7 +41,7 @@
     }
    ]
   },
-  "bwicki/stueve_cast": {
+  "bwicki/stueve": {
    "version": null,
    "pushed": "2026-08-26T20:02:50Z",
    "commits": [
@@ -146,9 +146,17 @@
    ]
   },
   "bwicki/ops": {
-   "version": "0.14.3",
-   "pushed": "2026-10-30T23:15:48Z",
+   "version": null,
+   "pushed": "2026-10-31T02:33:33Z",
    "commits": [
+    {
+     "date": "2026-10-31T02:33:30Z",
+     "msg": "DWD/METAR 2026-10-31 02:33 UTC"
+    },
+    {
+     "date": "2026-10-31T00:57:03Z",
+     "msg": "NOTAM 2026-10-31 00:57 UTC"
+    },
     {
      "date": "2026-10-30T23:15:45Z",
      "msg": "DWD/METAR 2026-10-30 23:15 UTC"
@@ -160,14 +168,6 @@
     {
      "date": "2026-10-30T19:31:44Z",
      "msg": "DWD/METAR 2026-10-30 19:31 UTC"
-    },
-    {
-     "date": "2026-10-30T16:56:25Z",
-     "msg": "NOTAM 2026-10-30 16:56 UTC"
-    },
-    {
-     "date": "2026-10-30T14:22:46Z",
-     "msg": "DWD/METAR 2026-10-30 14:22 UTC"
     }
    ]
   },
