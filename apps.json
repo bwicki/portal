@@ -19,6 +19,7 @@
     { "id": "s2planning",  "name": "S2 Planning",        "phase": "s2",     "repo": "bwicki/s2_flightplanning", "version_file": "app.js",              "de": "Windsond-Aufstiege planen",                    "en": "Plan Windsond soundings" },
     { "id": "s2ground",    "name": "S2 Ground",          "phase": "s2",     "repo": "bwicki/s2ground",          "version_file": "src/version.js",      "de": "Sonde und Empfänger RR4 steuern",              "en": "Control probe and RR4 receiver" },
     { "id": "s2stueve",    "name": "S2 Stüve",           "phase": "s2",     "repo": "bwicki/s2_stueve",         "version_file": "index.html", "version_re": "versionStamp[^>]*>[^<]*?v(\\d[\\w.\\-]*)", "de": "Auswertung der Sondendaten", "en": "Sounding analysis" },
-    { "id": "gb26praesi",  "name": "Gordon Bennett 2026","phase": "talk",   "repo": "bwicki/gb26praesi",        "version_file": "assets/js/version.js","de": "Vortrag Finnland und Sizilien",                "en": "Talk: Finland and Sicily" }
+    { "id": "gb26praesi",  "name": "Gordon Bennett 2026","phase": "talk",   "repo": "bwicki/gb26praesi",        "version_file": "assets/js/version.js","de": "Vortrag Finnland und Sizilien",                "en": "Talk: Finland and Sicily" },
+    { "id": "diashow",     "name": "Diashow",            "phase": "talk",   "repo": "bwicki/diashow",                                          "de": "Bilder vergangener Ballonfahrten an Anlässen zeigen", "en": "Slideshows of past balloon flights for events" }
   ]
 }
