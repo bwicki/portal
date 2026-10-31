@@ -17,6 +17,10 @@ jobs:
             echo "Diagnose $(date -u +%FT%TZ)"
             echo "== Worker /api/status"
             curl -sS --max-time 30 https://portal-api.balthasar.workers.dev/api/status; echo
+            echo "== Worker /api/usage"
+            curl -sS --max-time 30 https://portal-api.balthasar.workers.dev/api/usage; echo
+            echo "== hit.js"
+            curl -sS -o /dev/null -w "code=%{http_code}\n" https://portal.wicki.aero/hit.js
             echo "== Worker zweiter Abruf (Cache)"
             curl -sS -D - -o /dev/null --max-time 30 https://portal-api.balthasar.workers.dev/api/status | grep -iE "^HTTP|x-cache"
             echo "== NS wicki.aero"; dig +short NS wicki.aero
