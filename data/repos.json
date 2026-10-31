@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T19:52:54.499Z",
+ "generated": "2026-10-31T19:58:13.376Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
@@ -30,11 +30,15 @@
    ]
   },
   "bwicki/stueve": {
-   "version": "0.12.1",
+   "version": "0.12.2",
    "version_source": "js/app.js",
-   "updated": "2026-10-31T14:19:16Z",
-   "pushed": "2026-10-31T14:19:18Z",
+   "updated": "2026-10-31T19:57:51Z",
+   "pushed": "2026-10-31T19:57:53Z",
    "commits": [
+    {
+     "date": "2026-10-31T19:57:51Z",
+     "msg": "0.12.2: App heisst neu «Stüve» (Titel, Manifest, Dialoge, Dateinamen)"
+    },
     {
      "date": "2026-10-31T14:19:16Z",
      "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
@@ -50,10 +54,6 @@
     {
      "date": "2026-10-30T23:02:30Z",
      "msg": "v0.12.1: thin out Stüve background grid on narrow plots"
-    },
-    {
-     "date": "2026-08-26T20:02:49Z",
-     "msg": "c"
     }
    ]
   },
