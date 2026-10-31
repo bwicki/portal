@@ -82,10 +82,12 @@ main{padding-top:28px;padding-bottom:40px;display:flex;flex-direction:column;gap
 .chip .star{color:var(--star);}
 
 /* Phasen */
-.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:start;}
+/* Spalten: auf breiten Bildschirmen drei Stapel (col in apps.json), sonst eine Spalte in Phasen-Reihenfolge */
+.phases{display:flex;flex-direction:column;gap:20px;}
+.phases .col{display:contents;}
 @media (min-width:1000px){
-  .phases{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto 1fr;}
-  .phase[data-phase="prep"],.phase[data-phase="flight"]{grid-row:span 2;}
+  .phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;}
+  .phases .col{display:flex;flex-direction:column;gap:20px;min-width:0;}
 }
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;}
 .phase-h{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line-soft);}
@@ -96,6 +98,7 @@ main{padding-top:28px;padding-bottom:40px;display:flex;flex-direction:column;gap
 .phase[data-phase="flight"] .phase-h{background:var(--band-flight);}
 .phase[data-phase="post"] .phase-h{background:var(--band-post);}
 .phase[data-phase="talk"] .phase-h{background:var(--band-talk);}
+.phase[data-phase="s2"] .phase-h{background:#eaf2f4;}
 .apps{list-style:none;margin:0;padding:0;}
 .app{display:flex;align-items:stretch;border-bottom:1px solid var(--line-soft);}
 .app:last-child{border-bottom:0;}
@@ -107,6 +110,9 @@ main{padding-top:28px;padding-bottom:40px;display:flex;flex-direction:column;gap
 .app-desc{font-size:14px;color:var(--dim);}
 .app-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-family:var(--mono);font-size:12px;color:var(--dim);}
 .app-meta .host{color:#2a5d8f;}
+.app-meta2{color:var(--dim);}
+.app-meta2{column-gap:14px;}
+.app-meta2 .ver-t{color:var(--text);font-weight:500;}
 .app-meta .state.down{color:var(--down);font-weight:500;}
 .app-meta .state.slow{color:#8a5806;}
 .app-tools{display:flex;flex-direction:column;justify-content:center;padding-right:6px;}

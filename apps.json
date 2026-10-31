@@ -1,24 +1,25 @@
 {
-  "_hinweis": "Eine neue App = ein neuer Eintrag. phase: prep | flight | post | talk. Reihenfolge innerhalb der Phase = Reihenfolge hier.",
+  "_hinweis": "Eine neue App = ein neuer Eintrag. phase: id einer Phase unten. version_file: Datei im Repository, aus der die Version gelesen wird (optional version_re mit einer Klammergruppe). Reihenfolge innerhalb der Phase = Reihenfolge hier. col = Spalte auf breiten Bildschirmen (1–3).",
   "phases": [
-    { "id": "prep",   "de": "Vorbereitung",  "en": "Preparation", "sub_de": "Meteo, Planung, Briefing",   "sub_en": "Weather, planning, briefing" },
-    { "id": "flight", "de": "Fahrt",         "en": "Flight",      "sub_de": "im Korb und Retrieve",       "sub_en": "In the basket and retrieve" },
-    { "id": "post",   "de": "Nachbereitung", "en": "Debrief",     "sub_de": "Auswertung und Logbuch",     "sub_en": "Analysis and logbook" },
-    { "id": "talk",   "de": "Vorträge",      "en": "Talks",       "sub_de": "Präsentationen",             "sub_en": "Presentations" }
+    { "id": "prep",   "col": 1, "de": "Vorbereitung",           "en": "Preparation",     "sub_de": "Meteo, Planung, Briefing",   "sub_en": "Weather, planning, briefing" },
+    { "id": "flight", "col": 2, "de": "Fahrt",                  "en": "Flight",          "sub_de": "im Korb und Retrieve",       "sub_en": "In the basket and retrieve" },
+    { "id": "post",   "col": 3, "de": "Nachbereitung",          "en": "Debrief",         "sub_de": "Auswertung und Logbuch",     "sub_en": "Analysis and logbook" },
+    { "id": "s2",     "col": 2, "de": "Windsonde S2/RR4",       "en": "Windsond S2/RR4", "sub_de": "Planen, Steuern, Auswerten", "sub_en": "Plan, control, analyse" },
+    { "id": "talk",   "col": 3, "de": "Vorträge und sonstiges", "en": "Talks and other", "sub_de": "Präsentationen",             "sub_en": "Presentations" }
   ],
   "apps": [
-    { "id": "gafor",       "name": "GaforCast",          "phase": "prep",   "repo": "bwicki/gafor",             "de": "GAFOR-Prognosen Schweiz",                      "en": "GAFOR forecasts Switzerland" },
-    { "id": "gaforeurope", "name": "GaforCast Europa",   "phase": "prep",   "repo": "bwicki/gaforcasteurope",   "de": "GAFOR-Prognosen Europa",                       "en": "GAFOR forecasts Europe", "name_en": "GaforCast Europe" },
-    { "id": "stuevecast",  "name": "StueveCast",         "phase": "prep",   "repo": "bwicki/stueve",            "de": "Stüve / Emagramm / Skew-T aus Wettermodellen", "en": "Stüve / emagram / skew-T from weather models" },
-    { "id": "cockpit",     "name": "Cockpit",            "phase": "prep",   "repo": "bwicki/cockpit",           "de": "Trajektorienberechnung",                       "en": "Trajectory calculation" },
-    { "id": "s2planning",  "name": "S2 Planning",        "phase": "prep",   "repo": "bwicki/s2_flightplanning", "de": "Windsond-Aufstiege planen",                    "en": "Plan Windsond soundings" },
-    { "id": "o2",          "name": "O2",                 "phase": "prep",   "repo": "bwicki/o2",                "de": "Sauerstoffvorrat und Reichweite",              "en": "Oxygen supply and endurance" },
-    { "id": "ops",         "name": "Ops",                "phase": "prep",   "repo": "bwicki/ops",               "de": "Fahrtbriefing und Fahrtdokumente",             "en": "Flight briefing and flight documents" },
-    { "id": "checklists",  "name": "SBA Checklisten",    "phase": "flight", "repo": "bwicki/checklists",        "de": "Checklisten je Flugzustand",                   "en": "Checklists per flight phase", "name_en": "SBA Checklists" },
-    { "id": "reporting",   "name": "Reporting",          "phase": "flight", "repo": "bwicki/gb_notion_frontend","de": "Zustandsmeldungen Gasfahrt",                   "en": "Gas flight status reports" },
-    { "id": "s2ground",    "name": "S2 Ground",          "phase": "flight", "repo": "bwicki/s2ground",          "de": "Windsond-Sonde und Empfänger RR4",             "en": "Windsond probe and RR4 receiver" },
-    { "id": "analyze",     "name": "Analyze",            "phase": "post",   "repo": "bwicki/analyze",           "de": "Fahrtanalyse aus Trackerdaten, Logbuch-PDF",   "en": "Flight analysis from tracker data, logbook PDF" },
-    { "id": "s2stueve",    "name": "S2 Stüve",           "phase": "post",   "repo": "bwicki/s2_stueve",         "de": "Auswertung der Windsond-Sondendaten",          "en": "Windsond sounding analysis" },
-    { "id": "gb26praesi",  "name": "Gordon Bennett 2026","phase": "talk",   "repo": "bwicki/gb26praesi",        "de": "Vortrag Finnland und Sizilien",                "en": "Talk: Finland and Sicily" }
+    { "id": "gafor",       "name": "GaforCast",          "phase": "prep",   "repo": "bwicki/gafor",             "version_file": "js/version.js",       "de": "GAFOR-Prognosen Schweiz",                      "en": "GAFOR forecasts Switzerland" },
+    { "id": "gaforeurope", "name": "GaforCast Europa",   "phase": "prep",   "repo": "bwicki/gaforcasteurope",                                          "de": "GAFOR-Prognosen Europa",                       "en": "GAFOR forecasts Europe", "name_en": "GaforCast Europe" },
+    { "id": "stuevecast",  "name": "StueveCast",         "phase": "prep",   "repo": "bwicki/stueve",            "version_file": "js/app.js",           "de": "Stüve / Emagramm / Skew-T aus Wettermodellen", "en": "Stüve / emagram / skew-T from weather models" },
+    { "id": "cockpit",     "name": "Cockpit",            "phase": "prep",   "repo": "bwicki/cockpit",           "version_file": "index.html",          "de": "Trajektorienberechnung",                       "en": "Trajectory calculation" },
+    { "id": "o2",          "name": "O2",                 "phase": "prep",   "repo": "bwicki/o2",                "version_file": "js/version.js",       "de": "Sauerstoffvorrat und Reichweite",              "en": "Oxygen supply and endurance" },
+    { "id": "ops",         "name": "Ops",                "phase": "prep",   "repo": "bwicki/ops",               "version_file": "js/version.js",       "de": "Fahrtbriefing und Fahrtdokumente",             "en": "Flight briefing and flight documents" },
+    { "id": "checklists",  "name": "SBA Checklisten",    "phase": "flight", "repo": "bwicki/checklists",        "version_file": "js/version.js",       "de": "Checklisten je Flugzustand",                   "en": "Checklists per flight phase", "name_en": "SBA Checklists" },
+    { "id": "reporting",   "name": "Reporting",          "phase": "flight", "repo": "bwicki/gb_notion_frontend","version_file": "index.html",          "de": "Zustandsmeldungen Gasfahrt",                   "en": "Gas flight status reports" },
+    { "id": "analyze",     "name": "Analyze",            "phase": "post",   "repo": "bwicki/analyze",           "version_file": "src/state.js",        "de": "Fahrtanalyse aus Trackerdaten, Logbuch-PDF",   "en": "Flight analysis from tracker data, logbook PDF" },
+    { "id": "s2planning",  "name": "S2 Planning",        "phase": "s2",     "repo": "bwicki/s2_flightplanning", "version_file": "app.js",              "de": "Windsond-Aufstiege planen",                    "en": "Plan Windsond soundings" },
+    { "id": "s2ground",    "name": "S2 Ground",          "phase": "s2",     "repo": "bwicki/s2ground",          "version_file": "src/version.js",      "de": "Sonde und Empfänger RR4 steuern",              "en": "Control probe and RR4 receiver" },
+    { "id": "s2stueve",    "name": "S2 Stüve",           "phase": "s2",     "repo": "bwicki/s2_stueve",         "version_file": "index.html", "version_re": "versionStamp[^>]*>[^<]*?v(\\d[\\w.\\-]*)", "de": "Auswertung der Sondendaten", "en": "Sounding analysis" },
+    { "id": "gb26praesi",  "name": "Gordon Bennett 2026","phase": "talk",   "repo": "bwicki/gb26praesi",        "version_file": "assets/js/version.js","de": "Vortrag Finnland und Sizilien",                "en": "Talk: Finland and Sicily" }
   ]
 }

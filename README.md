@@ -1,15 +1,15 @@
 # Portal — Zugang zu allen Ballon-Apps
 
 Einstiegsseite zu allen WebApps, die Balthasar Wicki für das Ballonfahren baut: nach
-Fahrtphase gegliedert (Vorbereitung, Fahrt, Nachbereitung, Vorträge), mit Statusleuchte je
-App, Versionsangabe, Favoriten, Suche und «Neu & geändert». Zweisprachig DE/EN, ohne Kennwort
+Phase gegliedert (Vorbereitung, Fahrt, Nachbereitung, Windsonde S2/RR4, Vorträge und sonstiges),
+mit Statusleuchte, Version, Stand und «zuletzt benutzt» je App, Favoriten, Suche und «Neu & geändert». Zweisprachig DE/EN, ohne Kennwort
 (der Zugangsschutz bleibt in den einzelnen Apps).
 
 **Live:** https://portal.wicki.aero · **Repository:** https://github.com/bwicki/portal
 **Stack:** HTML/CSS/JS ohne Build-Schritt (GitHub Pages) + Cloudflare Worker `portal-api`
 (Statusprüfung, ohne Datenbank) + GitHub Action (Versionen und Änderungen aus GitHub).
 
-Stand: Version 0.1.0 (siehe CHANGELOG.md).
+Stand: Version 0.2.0 (siehe CHANGELOG.md).
 
 ---
 
@@ -22,8 +22,10 @@ Stand: Version 0.1.0 (siehe CHANGELOG.md).
   Geprüft wird beim Öffnen und danach alle 5 Minuten, solange die Seite sichtbar ist.
 - **Schnellzugriff:** Favoriten (Stern an der App) und zuletzt benutzte Apps. Wird je Gerät im
   Browser gespeichert, nicht auf einem Server.
-- **Phasen-Karten:** je App Statusleuchte, Name, Beschrieb, Subdomain, Version und – nur bei
-  Abweichung – «langsam 2.4 s» oder «nicht erreichbar». Rechts Stern (Favorit) und Link zum
+- **Phasen-Karten:** je App Statusleuchte, Name, Beschrieb, Subdomain und – nur bei Abweichung –
+  «langsam 2.4 s» oder «nicht erreichbar»; darunter **Version**, **Stand** (Datum der letzten
+  inhaltlichen Änderung im Repository) und **benutzt** (letzter Aufruf über das Portal auf diesem
+  Gerät; Aufrufe direkt über die App-Adresse oder ein installiertes App-Symbol sieht das Portal nicht). Rechts Stern (Favorit) und Link zum
   Quelltext auf GitHub. Apps öffnen in einem neuen Tab.
 - **Neu & geändert:** die letzten Commits über alle App-Repositories.
 
@@ -41,9 +43,10 @@ prüft der Browser selbst – dann nur «erreichbar ja/nein», gekennzeichnet mi
 
 ### Versionsangaben
 
-Die Action «Update repos» liest stündlich je Repository: neuester Release → sonst neuester Tag →
-sonst die erste Versionsnummer «x.y.z» in den letzten Commit-Meldungen → sonst «Stand» mit dem
-Datum des letzten Push. Ergebnis in `data/repos.json`.
+Die Action «Update repos» liest stündlich je App die Version aus der Datei, die in `apps.json` unter
+`version_file` steht (z. B. `js/version.js`; die erste Zuweisung `version: '…'`, `VERSION = '…'` oder
+`APP_VERSION = '…'`; abweichendes Muster mit `version_re`). Fehlt sie: neuester Release → neuester Tag →
+erste Versionsnummer in den Commit-Meldungen → «ohne Version». Ergebnis in `data/repos.json`.
 
 ---
 
@@ -57,7 +60,10 @@ Nur `apps.json` bearbeiten (auf GitHub: Datei öffnen → Stift → Commit):
 ```
 
 - `id` = Subdomain (o2 → https://o2.wicki.aero). Abweichende Adresse: zusätzlich `"url": "https://…"`.
-- `phase`: `prep` (Vorbereitung), `flight` (Fahrt), `post` (Nachbereitung), `talk` (Vorträge).
+- `phase`: `prep` (Vorbereitung), `flight` (Fahrt), `post` (Nachbereitung), `s2` (Windsonde S2/RR4),
+  `talk` (Vorträge und sonstiges). Phasen stehen oben in `apps.json`; `col` = Spalte am Desktop.
+- `version_file`: Datei im Repository mit der Versionsnummer (siehe oben).
+- **DNS:** jede Subdomain braucht bei united-domains einen CNAME-Eintrag auf `bwicki.github.io`.
 - `name_en` nur, wenn der englische Name anders lautet.
 - Die Reihenfolge in der Datei ist die Reihenfolge auf der Seite.
 

@@ -1,5 +1,14 @@
 # Änderungen
 
+## 0.2.0 — 31.10.2026
+
+- Bei jeder App: Version, Stand (Datum der letzten Änderung) und «benutzt» (letzter Aufruf über das Portal, je Gerät).
+- Versionen werden aus der Versionsdatei jeder App gelesen (`version_file` in `apps.json`) statt nur aus Releases/Commits.
+- Neue Kategorie «Windsonde S2/RR4» (S2 Planning, S2 Ground, S2 Stüve); «Vorträge» heisst neu «Vorträge und sonstiges».
+- Desktop: drei Spalten, Handy: Phasen in fester Reihenfolge.
+- StueveCast verweist auf das Repository `bwicki/stueve`.
+- Workflow «Diagnose» (Actions): prüft Worker, DNS und App-Adressen, Ergebnis in `data/diagnose.txt`.
+
 ## 0.1.0 — 31.10.2026
 
 Erste Version.

@@ -11,7 +11,10 @@
   let lang = LS.get('lang', 'de');
   if (!T[lang]) lang = 'de';
   let favs = LS.get('favs', []);
-  let recent = LS.get('recent', []);
+  let usedAt = LS.get('usedAt', {});
+  // Übernahme aus 0.1.0 (nur Reihenfolge, ohne Zeit)
+  LS.get('recent', []).forEach((id, i) => { if (!usedAt[id]) usedAt[id] = 0; });
+  const recentIds = () => Object.keys(usedAt).sort((a, b) => usedAt[b] - usedAt[a]);
   let APPS = [], PHASES = [], REPOS = {}, STATUS = {}, statusTime = null, statusSource = '';
   let timer = null;
 
@@ -116,17 +119,30 @@
     LS.set('favs', favs); render();
   }
   function used(id) {
-    recent = [id].concat(recent.filter(x => x !== id)).slice(0, 6);
-    LS.set('recent', recent);
+    usedAt[id] = Date.now();
+    LS.set('usedAt', usedAt);
+    const n = document.querySelector('[data-used="' + id + '"]');
+    if (n) n.textContent = usedText(id);
+  }
+  function usedText(id) {
+    const ms = usedAt[id];
+    if (!ms) return t('usedNever');
+    const d = new Date(ms), now = new Date();
+    const day = x => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
+    const diff = Math.round((day(now) - day(d)) / 86400000);
+    const when = diff === 0 ? t('today') + ' ' + hhmm(d) : diff === 1 ? t('yesterday') + ' ' + hhmm(d) : ddmmyy(d.toISOString());
+    return t('used') + ' ' + when;
   }
 
   /* ---------- Darstellung ---------- */
   function verText(a) {
     const r = REPOS[a.repo];
-    if (!r) return '';
-    if (r.version) return 'v' + String(r.version).replace(/^v/i, '');
-    if (r.pushed) return t('stand') + ' ' + ddmmyy(r.pushed);
-    return '';
+    return r && r.version ? 'v' + String(r.version).replace(/^v/i, '') : t('noVersion');
+  }
+  function standText(a) {
+    const r = REPOS[a.repo];
+    const d = r && (r.updated || r.pushed);
+    return d ? t('stand') + ' ' + ddmmyy(d) : t('stand') + ' –';
   }
   function appRow(a) {
     const isFav = favs.includes(a.id);
@@ -139,8 +155,12 @@
       el('span', { class: 'app-desc', text: appDesc(a) }),
       el('span', { class: 'app-meta' }, [
         el('span', { class: 'host', text: host }),
-        verText(a) ? el('span', { text: verText(a) }) : null,
         el('span', { class: 'state', 'data-state': a.id })
+      ]),
+      el('span', { class: 'app-meta app-meta2' }, [
+        el('span', { class: 'ver-t', text: verText(a) }),
+        el('span', { text: standText(a) }),
+        el('span', { class: 'used', 'data-used': a.id, text: usedText(a.id) })
       ])
     ]);
     const tools = el('div', { class: 'app-tools' }, [
@@ -160,10 +180,11 @@
     $('#ver').title = t('verTitle');
 
     const box = $('#phases'); box.textContent = '';
+    const cols = [1, 2, 3].map(n => { const c = el('div', { class: 'col' }); box.appendChild(c); return c; });
     PHASES.forEach((p, i) => {
       const apps = APPS.filter(a => a.phase === p.id);
       if (!apps.length) return;
-      box.appendChild(el('section', { class: 'card phase', 'data-phase': p.id }, [
+      cols[Math.min(3, Math.max(1, p.col || 1)) - 1].appendChild(el('section', { class: 'card phase', 'data-phase': p.id, style: 'order:' + i }, [
         el('div', { class: 'phase-h' }, [
           el('span', { class: 'no', 'aria-hidden': 'true', text: String(i + 1) }),
           el('div', null, [el('h2', { text: p[lang] || p.de }), el('div', { class: 'sub', text: p['sub_' + lang] || p.sub_de })])
@@ -172,7 +193,7 @@
       ]));
     });
 
-    const quickIds = favs.concat(recent.filter(x => !favs.includes(x))).filter(id => APPS.some(a => a.id === id)).slice(0, 8);
+    const quickIds = favs.concat(recentIds().filter(x => !favs.includes(x))).filter(id => APPS.some(a => a.id === id)).slice(0, 8);
     const chips = $('#chips'); chips.textContent = '';
     quickIds.forEach(id => {
       const a = APPS.find(x => x.id === id);
