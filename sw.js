@@ -1,5 +1,5 @@
 /* portal.wicki.aero – Service Worker: Grundgerüst offline, Daten immer zuerst vom Netz */
-const CACHE = 'portal-0.3.0';
+const CACHE = 'portal-0.3.1';
 const SHELL = ['./', 'index.html', 'css/portal.css', 'js/config.js', 'js/i18n.js', 'js/app.js', 'apps.json',
   'img/wicki-logo.png', 'icons/favicon.svg', 'icons/icon-192.png',
   'fonts/atkinson-hyperlegible-latin-400-normal.woff2', 'fonts/atkinson-hyperlegible-latin-700-normal.woff2',

@@ -1,11 +1,15 @@
 # Änderungen
 
+## 0.3.1 — 31.10.2026
+
+- Diashow (diashow.wicki.aero) in «Vorträge und sonstiges» aufgenommen.
+- StueveCast heisst neu «Stüve» (auch in der App selbst, dort Version 0.12.2).
+
 ## 0.3.0 — 31.10.2026
 
 - «benutzt» zählt jetzt alle Aufrufe jeder App auf allen Geräten: Zähler im Worker (Durable Object), Skript `hit.js`, in alle 12 Apps eingebunden.
 - Stüve (ehemals StueveCast) unter stueve.wicki.aero (id `stueve`).
 - GaforCast Europa entfernt (nicht realisiert).
-- Diashow (diashow.wicki.aero) aufgenommen.
 
 ## 0.2.0 — 31.10.2026
 

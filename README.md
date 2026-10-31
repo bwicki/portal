@@ -9,7 +9,7 @@ mit Statusleuchte, Version, Stand und «zuletzt benutzt» je App, Favoriten, Suc
 **Stack:** HTML/CSS/JS ohne Build-Schritt (GitHub Pages) + Cloudflare Worker `portal-api`
 (Statusprüfung, ohne Datenbank) + GitHub Action (Versionen und Änderungen aus GitHub).
 
-Stand: Version 0.3.0 (siehe CHANGELOG.md).
+Stand: Version 0.3.1 (siehe CHANGELOG.md).
 
 ---
 
