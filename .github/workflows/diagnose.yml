@@ -1,0 +1,31 @@
+# Diagnose: fragt den Status-Worker und alle App-Adressen ab und legt das Ergebnis in data/diagnose.txt ab.
+name: Diagnose
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Abfragen
+        run: |
+          out=data/diagnose.txt
+          {
+            echo "Diagnose $(date -u +%FT%TZ)"
+            echo "== Worker /api/status"
+            curl -sS --max-time 30 https://portal-api.balthasar.workers.dev/api/status; echo
+            echo "== Worker zweiter Abruf (Cache)"
+            curl -sS -D - -o /dev/null --max-time 30 https://portal-api.balthasar.workers.dev/api/status | grep -iE "^HTTP|x-cache"
+            for s in stuevecast gafor ops; do
+              echo "== $s: DNS"; dig +short $s.wicki.aero
+              echo "== $s: GET (Runner)"; curl -sS -o /dev/null -L --max-time 15 -w "code=%{http_code} redirects=%{num_redirects} final=%{url_effective} t=%{time_total}\n" https://$s.wicki.aero/
+              echo "== $s: Kopfzeilen"; curl -sSI --max-time 15 https://$s.wicki.aero/ | head -12
+            done
+          } > $out 2>&1
+          cat $out
+      - name: Ablegen
+        run: |
+          git config user.name 'portal-bot'; git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/diagnose.txt; git commit -m "Diagnose $(date -u +%FT%TZ)" || exit 0; git pull --rebase; git push
