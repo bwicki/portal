@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T17:42:43.304Z",
+ "generated": "2026-10-31T19:52:54.499Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
@@ -116,9 +116,17 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-10-31T15:15:46Z",
-   "pushed": "2026-10-31T15:15:48Z",
+   "updated": "2026-10-31T19:24:08Z",
+   "pushed": "2026-10-31T19:24:11Z",
    "commits": [
+    {
+     "date": "2026-10-31T19:24:08Z",
+     "msg": "DWD/METAR 2026-10-31 19:24 UTC"
+    },
+    {
+     "date": "2026-10-31T17:51:38Z",
+     "msg": "NOTAM 2026-10-31 17:51 UTC"
+    },
     {
      "date": "2026-10-31T15:15:46Z",
      "msg": "DWD/METAR 2026-10-31 15:15 UTC"
@@ -130,14 +138,6 @@
     {
      "date": "2026-10-31T13:17:56Z",
      "msg": "NOTAM 2026-10-31 13:17 UTC"
-    },
-    {
-     "date": "2026-10-31T08:54:19Z",
-     "msg": "DWD/METAR 2026-10-31 08:54 UTC"
-    },
-    {
-     "date": "2026-10-31T06:37:26Z",
-     "msg": "NOTAM 2026-10-31 06:37 UTC"
     }
    ]
   },
@@ -333,6 +333,22 @@
     },
     {
      "date": "2026-10-21T11:54:07Z",
+     "msg": "Initial commit"
+    }
+   ]
+  },
+  "bwicki/diashow": {
+   "version": null,
+   "version_source": null,
+   "updated": "2026-10-31T19:25:05Z",
+   "pushed": "2026-10-31T19:25:06Z",
+   "commits": [
+    {
+     "date": "2026-10-31T19:25:05Z",
+     "msg": "Create CNAME"
+    },
+    {
+     "date": "2026-10-31T19:24:35Z",
      "msg": "Initial commit"
     }
    ]
