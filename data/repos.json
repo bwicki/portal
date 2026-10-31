@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T13:39:48.689Z",
+ "generated": "2026-10-31T14:16:49.795Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
@@ -29,46 +29,30 @@
     }
    ]
   },
-  "bwicki/gaforcasteurope": {
-   "version": null,
-   "version_source": null,
-   "updated": "2026-09-17T12:55:21Z",
-   "pushed": "2026-09-17T12:55:21Z",
+  "bwicki/stueve": {
+   "version": "0.12.1",
+   "version_source": "js/app.js",
+   "updated": "2026-10-31T14:10:54Z",
+   "pushed": "2026-10-31T14:10:54Z",
    "commits": [
     {
-     "date": "2026-09-17T12:55:21Z",
-     "msg": "Create CNAME"
+     "date": "2026-10-31T14:10:54Z",
+     "msg": "Update CNAME"
     },
     {
-     "date": "2026-09-17T12:48:58Z",
-     "msg": "Initial commit"
-    }
-   ]
-  },
-  "bwicki/stueve": {
-   "version": "0.12.0",
-   "version_source": "js/app.js",
-   "updated": "2026-08-26T20:02:49Z",
-   "pushed": "2026-08-26T20:02:50Z",
-   "commits": [
+     "date": "2026-10-31T14:10:44Z",
+     "msg": "Update CNAME"
+    },
+    {
+     "date": "2026-10-30T23:02:30Z",
+     "msg": "v0.12.1: thin out Stüve background grid on narrow plots"
+    },
     {
      "date": "2026-08-26T20:02:49Z",
      "msg": "c"
     },
     {
      "date": "2026-08-25T18:25:06Z",
-     "msg": "Add files via upload"
-    },
-    {
-     "date": "2026-08-25T18:05:18Z",
-     "msg": "Add files via upload"
-    },
-    {
-     "date": "2026-08-25T17:42:14Z",
-     "msg": "Add files via upload"
-    },
-    {
-     "date": "2026-08-25T17:01:27Z",
      "msg": "Add files via upload"
     }
    ]
@@ -186,11 +170,19 @@
    ]
   },
   "bwicki/gb_notion_frontend": {
-   "version": "261031-01",
+   "version": "261031-03",
    "version_source": "index.html",
-   "updated": "2026-10-31T13:38:48Z",
-   "pushed": "2026-10-31T13:38:50Z",
+   "updated": "2026-10-31T14:02:53Z",
+   "pushed": "2026-10-31T14:02:55Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:02:53Z",
+     "msg": "v261031-03 — try a viewer code before you send it, and prove the token"
+    },
+    {
+     "date": "2026-10-31T13:46:46Z",
+     "msg": "v261031-02 — the viewer code brought into line with the rest of the file"
+    },
     {
      "date": "2026-10-31T13:38:48Z",
      "msg": "v261031-01 — viewer join code: read-only access to the archive"
@@ -202,23 +194,23 @@
     {
      "date": "2026-10-18T20:11:05Z",
      "msg": "v261018-01 — the ArcGIS key leaves the source"
-    },
-    {
-     "date": "2026-10-17T11:46:26Z",
-     "msg": "v261017-03 — flight archive, with GeoJSON and KML export"
-    },
-    {
-     "date": "2026-10-17T08:27:54Z",
-     "msg": "v261017-02 — overdue Ops Normal alarm repeats for ten minutes, not thirty"
     }
    ]
   },
   "bwicki/analyze": {
-   "version": "0.15.8",
+   "version": "0.15.10",
    "version_source": "src/state.js",
-   "updated": "2026-10-31T13:30:08Z",
-   "pushed": "2026-10-31T13:30:10Z",
+   "updated": "2026-10-31T14:03:15Z",
+   "pushed": "2026-10-31T14:03:17Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:03:15Z",
+     "msg": "0.15.10: Logo in der Kopfzeile wieder ganz rechts aussen, Knöpfe links davon"
+    },
+    {
+     "date": "2026-10-31T13:48:37Z",
+     "msg": "0.15.9: Kopfzeile – Schritt-Chips in einer Zeile über die ganze Breite, Versionsnummer klein rechts aussen unter den Knöpfen, Logo und Knöpf"
+    },
     {
      "date": "2026-10-31T13:30:08Z",
      "msg": "0.15.8: Meldungen bleiben stehen – Kacheln mit Kopieren/Schliessen (Fehler bis zum Schliessen, Hinweise 7 s, gestapelt), Fenster «Meldungen»"
@@ -230,14 +222,6 @@
     {
      "date": "2026-10-30T22:56:40Z",
      "msg": "0.15.7: ops-Übergabe – ops-Fehlertext und Route in der Meldung, fehlgeschlagene Übergaben/Listenabrufe im Nutzungsprotokoll, Zeile «Neue Fah"
-    },
-    {
-     "date": "2026-10-30T22:46:27Z",
-     "msg": "ops handover check: Diagnose-Workflow (Liste + PUT mit leerem Paket, nur Statuscodes)"
-    },
-    {
-     "date": "2026-10-29T18:28:31Z",
-     "msg": "0.15.6: Schritt 5 – «Alles als ZIP» als hervorgehobener Knopf neben der Auflösung; ops-Übergabe auch in Karte 5"
     }
    ]
   },
