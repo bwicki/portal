@@ -9,7 +9,7 @@
   ],
   "apps": [
     { "id": "gafor",       "name": "GaforCast",          "phase": "prep",   "repo": "bwicki/gafor",             "version_file": "js/version.js",       "de": "GAFOR-Prognosen Schweiz",                      "en": "GAFOR forecasts Switzerland" },
-    { "id": "stueve",      "name": "StueveCast",         "phase": "prep",   "repo": "bwicki/stueve",            "version_file": "js/app.js",           "de": "Stüve / Emagramm / Skew-T aus Wettermodellen", "en": "Stüve / emagram / skew-T from weather models" },
+    { "id": "stueve",      "name": "Stüve",              "phase": "prep",   "repo": "bwicki/stueve",            "version_file": "js/app.js",           "de": "Stüve / Emagramm / Skew-T aus Wettermodellen", "en": "Stüve / emagram / skew-T from weather models" },
     { "id": "cockpit",     "name": "Cockpit",            "phase": "prep",   "repo": "bwicki/cockpit",           "version_file": "index.html",          "de": "Trajektorienberechnung",                       "en": "Trajectory calculation" },
     { "id": "o2",          "name": "O2",                 "phase": "prep",   "repo": "bwicki/o2",                "version_file": "js/version.js",       "de": "Sauerstoffvorrat und Reichweite",              "en": "Oxygen supply and endurance" },
     { "id": "ops",         "name": "Ops",                "phase": "prep",   "repo": "bwicki/ops",               "version_file": "js/version.js",       "de": "Fahrtbriefing und Fahrtdokumente",             "en": "Flight briefing and flight documents" },
