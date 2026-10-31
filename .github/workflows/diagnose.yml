@@ -19,7 +19,9 @@ jobs:
             curl -sS --max-time 30 https://portal-api.balthasar.workers.dev/api/status; echo
             echo "== Worker zweiter Abruf (Cache)"
             curl -sS -D - -o /dev/null --max-time 30 https://portal-api.balthasar.workers.dev/api/status | grep -iE "^HTTP|x-cache"
-            for s in stuevecast gafor ops; do
+            echo "== NS wicki.aero"; dig +short NS wicki.aero
+            for s in stuevecast gaforeurope www stueve; do echo "== $s @1.1.1.1"; dig +short $s.wicki.aero @1.1.1.1; echo "== $s @8.8.8.8"; dig +short $s.wicki.aero @8.8.8.8; dig $s.wicki.aero @1.1.1.1 | grep -E "status|SOA" | head -2; done
+            for s in stuevecast gafor; do
               echo "== $s: DNS"; dig +short $s.wicki.aero
               echo "== $s: GET (Runner)"; curl -sS -o /dev/null -L --max-time 15 -w "code=%{http_code} redirects=%{num_redirects} final=%{url_effective} t=%{time_total}\n" https://$s.wicki.aero/
               echo "== $s: Kopfzeilen"; curl -sSI --max-time 15 https://$s.wicki.aero/ | head -12
