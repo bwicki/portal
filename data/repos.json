@@ -1,12 +1,20 @@
 {
- "generated": "2026-10-31T14:16:49.795Z",
+ "generated": "2026-10-31T17:42:43.304Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-10-31T12:14:44Z",
-   "pushed": "2026-10-31T12:14:45Z",
+   "updated": "2026-10-31T17:18:34Z",
+   "pushed": "2026-10-31T17:18:36Z",
    "commits": [
+    {
+     "date": "2026-10-31T17:18:34Z",
+     "msg": "DWD-Berichte 2026-10-31 17:18 UTC"
+    },
+    {
+     "date": "2026-10-31T14:19:14Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-31T12:14:44Z",
      "msg": "DWD-Berichte 2026-10-31 12:14 UTC"
@@ -18,23 +26,19 @@
     {
      "date": "2026-10-31T00:08:18Z",
      "msg": "DWD-Berichte 2026-10-31 00:08 UTC"
-    },
-    {
-     "date": "2026-10-30T20:42:44Z",
-     "msg": "DWD-Berichte 2026-10-30 20:42 UTC"
-    },
-    {
-     "date": "2026-10-30T15:51:30Z",
-     "msg": "DWD-Berichte 2026-10-30 15:51 UTC"
     }
    ]
   },
   "bwicki/stueve": {
    "version": "0.12.1",
    "version_source": "js/app.js",
-   "updated": "2026-10-31T14:10:54Z",
-   "pushed": "2026-10-31T14:10:54Z",
+   "updated": "2026-10-31T14:19:16Z",
+   "pushed": "2026-10-31T14:19:18Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:16Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-31T14:10:54Z",
      "msg": "Update CNAME"
@@ -50,19 +54,19 @@
     {
      "date": "2026-08-26T20:02:49Z",
      "msg": "c"
-    },
-    {
-     "date": "2026-08-25T18:25:06Z",
-     "msg": "Add files via upload"
     }
    ]
   },
   "bwicki/cockpit": {
    "version": "260824.21-1720",
    "version_source": "index.html",
-   "updated": "2026-08-25T16:59:08Z",
-   "pushed": "2026-08-25T16:59:09Z",
+   "updated": "2026-10-31T14:19:18Z",
+   "pushed": "2026-10-31T14:19:20Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:18Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-08-25T16:59:08Z",
      "msg": "Add files via upload"
@@ -78,19 +82,19 @@
     {
      "date": "2026-08-24T15:33:31Z",
      "msg": "Add files via upload"
-    },
-    {
-     "date": "2026-08-24T13:55:38Z",
-     "msg": "Add files via upload"
     }
    ]
   },
   "bwicki/o2": {
    "version": "0.3.1",
    "version_source": "js/version.js",
-   "updated": "2026-10-12T07:16:05Z",
-   "pushed": "2026-10-12T07:16:06Z",
+   "updated": "2026-10-31T14:19:20Z",
+   "pushed": "2026-10-31T14:19:22Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:20Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-12T07:16:05Z",
      "msg": "SETUP auf Englisch; Aufbewahrung der persönlichen Konfiguration ergänzt"
@@ -106,19 +110,23 @@
     {
      "date": "2026-10-12T06:02:23Z",
      "msg": "0.3.0: «Konfiguration aktualisieren?», Verbrauchsfaktor in der Konfiguration, Übergabe mit Kurzcode, BOP.BAS.180"
-    },
-    {
-     "date": "2026-10-12T05:34:11Z",
-     "msg": "0.2.0: persönlicher Kurzcode, Zylinderwechsel-Plan, Titel, Übernahme aus dem Fahrtbriefing, Sauerstoffregel"
     }
    ]
   },
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-10-31T13:17:56Z",
-   "pushed": "2026-10-31T13:17:58Z",
+   "updated": "2026-10-31T15:15:46Z",
+   "pushed": "2026-10-31T15:15:48Z",
    "commits": [
+    {
+     "date": "2026-10-31T15:15:46Z",
+     "msg": "DWD/METAR 2026-10-31 15:15 UTC"
+    },
+    {
+     "date": "2026-10-31T14:19:22Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-31T13:17:56Z",
      "msg": "NOTAM 2026-10-31 13:17 UTC"
@@ -130,23 +138,19 @@
     {
      "date": "2026-10-31T06:37:26Z",
      "msg": "NOTAM 2026-10-31 06:37 UTC"
-    },
-    {
-     "date": "2026-10-31T02:33:30Z",
-     "msg": "DWD/METAR 2026-10-31 02:33 UTC"
-    },
-    {
-     "date": "2026-10-31T00:57:03Z",
-     "msg": "NOTAM 2026-10-31 00:57 UTC"
     }
    ]
   },
   "bwicki/checklists": {
    "version": "0.2.0",
    "version_source": "js/version.js",
-   "updated": "2026-10-25T07:51:36Z",
-   "pushed": "2026-10-25T07:51:39Z",
+   "updated": "2026-10-31T14:19:25Z",
+   "pushed": "2026-10-31T14:19:27Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:25Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-25T07:51:36Z",
      "msg": "v0.2.0: SBA-Inhalt als Entwürfe, vertiefende Dokumente, Referenzgruppen, Reihenfolge"
@@ -162,19 +166,27 @@
     {
      "date": "2026-10-24T19:35:05Z",
      "msg": "Grundgerüst v0.1: Worker-Setup-Workflow, Schema, Health-Endpoint, SETUP.md, Startseite, Lizenz"
-    },
-    {
-     "date": "2026-10-24T19:04:00Z",
-     "msg": "Konzept v0.1: Pflichtenheft, Logos, README"
     }
    ]
   },
   "bwicki/gb_notion_frontend": {
-   "version": "261031-03",
+   "version": "261031-05",
    "version_source": "index.html",
-   "updated": "2026-10-31T14:02:53Z",
-   "pushed": "2026-10-31T14:02:55Z",
+   "updated": "2026-10-31T14:58:45Z",
+   "pushed": "2026-10-31T14:58:49Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:58:45Z",
+     "msg": "v261031-05 — a flight can be taken out of the archive"
+    },
+    {
+     "date": "2026-10-31T14:33:45Z",
+     "msg": "v261031-04 — ask GitHub for a refusal, not for an opinion"
+    },
+    {
+     "date": "2026-10-31T14:19:27Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-31T14:02:53Z",
      "msg": "v261031-03 — try a viewer code before you send it, and prove the token"
@@ -182,27 +194,19 @@
     {
      "date": "2026-10-31T13:46:46Z",
      "msg": "v261031-02 — the viewer code brought into line with the rest of the file"
-    },
-    {
-     "date": "2026-10-31T13:38:48Z",
-     "msg": "v261031-01 — viewer join code: read-only access to the archive"
-    },
-    {
-     "date": "2026-10-18T20:17:21Z",
-     "msg": "v261018-02 — windows stay above the Android keyboard"
-    },
-    {
-     "date": "2026-10-18T20:11:05Z",
-     "msg": "v261018-01 — the ArcGIS key leaves the source"
     }
    ]
   },
   "bwicki/analyze": {
    "version": "0.15.10",
    "version_source": "src/state.js",
-   "updated": "2026-10-31T14:03:15Z",
-   "pushed": "2026-10-31T14:03:17Z",
+   "updated": "2026-10-31T14:19:29Z",
+   "pushed": "2026-10-31T14:19:31Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:29Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-31T14:03:15Z",
      "msg": "0.15.10: Logo in der Kopfzeile wieder ganz rechts aussen, Knöpfe links davon"
@@ -218,19 +222,19 @@
     {
      "date": "2026-10-31T13:20:35Z",
      "msg": "0.15.8 (Teil 1): ops-Übergabe über Service-Binding OPS → briefing-api statt über die öffentliche workers.dev-Adresse; Diagnoseroute GET /api"
-    },
-    {
-     "date": "2026-10-30T22:56:40Z",
-     "msg": "0.15.7: ops-Übergabe – ops-Fehlertext und Route in der Meldung, fehlgeschlagene Übergaben/Listenabrufe im Nutzungsprotokoll, Zeile «Neue Fah"
     }
    ]
   },
   "bwicki/s2_flightplanning": {
    "version": "1.67.0",
    "version_source": "app.js",
-   "updated": "2026-08-27T21:24:31Z",
-   "pushed": "2026-08-27T21:24:32Z",
+   "updated": "2026-10-31T14:19:31Z",
+   "pushed": "2026-10-31T14:19:33Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:31Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-08-27T21:24:31Z",
      "msg": "c"
@@ -246,19 +250,19 @@
     {
      "date": "2026-08-27T20:20:19Z",
      "msg": "c"
-    },
-    {
-     "date": "2026-08-27T20:05:38Z",
-     "msg": "c"
     }
    ]
   },
   "bwicki/s2ground": {
    "version": "0.3",
    "version_source": "src/version.js",
-   "updated": "2026-10-30T22:59:12Z",
-   "pushed": "2026-10-31T09:39:26Z",
+   "updated": "2026-10-31T14:19:33Z",
+   "pushed": "2026-10-31T14:19:35Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:33Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-30T22:59:12Z",
      "msg": "Ortsnamen «LL-Ort» (z. B. CH-Baden); Startort-Suche zeigt alle gleichnamigen Orte zur Auswahl; Version 0.3"
@@ -274,19 +278,19 @@
     {
      "date": "2026-10-28T17:40:17Z",
      "msg": "Schnellstart Schritt 2: Stepper-Zahl mittig, weniger Schriftgrössen (18/28/14), Abstand vor «Erneut laden»"
-    },
-    {
-     "date": "2026-10-28T17:37:46Z",
-     "msg": "Anmeldung immer zuerst: kein Schnellstart-Knopf auf der Anmeldeseite, Login führt stets zu Schritt 1"
     }
    ]
   },
   "bwicki/s2_stueve": {
    "version": "1.03.04",
    "version_source": "index.html",
-   "updated": "2026-10-18T20:30:32Z",
-   "pushed": "2026-10-18T20:30:35Z",
+   "updated": "2026-10-31T14:19:36Z",
+   "pushed": "2026-10-31T14:19:38Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:36Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-18T20:30:32Z",
      "msg": "Follow: Chat-Zeiten in Lokalzeit, Chat 340 px, beendete Aufstiege im Dialog wählbar"
@@ -302,19 +306,19 @@
     {
      "date": "2026-08-12T13:39:51Z",
      "msg": "Add files via upload"
-    },
-    {
-     "date": "2026-08-04T12:09:25Z",
-     "msg": "Add files via upload"
     }
    ]
   },
   "bwicki/gb26praesi": {
    "version": "0.1.1",
    "version_source": "assets/js/version.js",
-   "updated": "2026-10-22T07:14:20Z",
-   "pushed": "2026-10-22T07:14:22Z",
+   "updated": "2026-10-31T14:19:38Z",
+   "pushed": "2026-10-31T14:19:40Z",
    "commits": [
+    {
+     "date": "2026-10-31T14:19:38Z",
+     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+    },
     {
      "date": "2026-10-22T07:14:20Z",
      "msg": "v0.1.1: Eingangsmaske mit Texten, de.json direkt laden, Sync-Action, Anleitung Texte ändern"
