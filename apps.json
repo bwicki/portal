@@ -9,7 +9,7 @@
   "apps": [
     { "id": "gafor",       "name": "GaforCast",          "phase": "prep",   "repo": "bwicki/gafor",             "de": "GAFOR-Prognosen Schweiz",                      "en": "GAFOR forecasts Switzerland" },
     { "id": "gaforeurope", "name": "GaforCast Europa",   "phase": "prep",   "repo": "bwicki/gaforcasteurope",   "de": "GAFOR-Prognosen Europa",                       "en": "GAFOR forecasts Europe", "name_en": "GaforCast Europe" },
-    { "id": "stuevecast",  "name": "StueveCast",         "phase": "prep",   "repo": "bwicki/stueve_cast",       "de": "Stüve / Emagramm / Skew-T aus Wettermodellen", "en": "Stüve / emagram / skew-T from weather models" },
+    { "id": "stuevecast",  "name": "StueveCast",         "phase": "prep",   "repo": "bwicki/stueve",            "de": "Stüve / Emagramm / Skew-T aus Wettermodellen", "en": "Stüve / emagram / skew-T from weather models" },
     { "id": "cockpit",     "name": "Cockpit",            "phase": "prep",   "repo": "bwicki/cockpit",           "de": "Trajektorienberechnung",                       "en": "Trajectory calculation" },
     { "id": "s2planning",  "name": "S2 Planning",        "phase": "prep",   "repo": "bwicki/s2_flightplanning", "de": "Windsond-Aufstiege planen",                    "en": "Plan Windsond soundings" },
     { "id": "o2",          "name": "O2",                 "phase": "prep",   "repo": "bwicki/o2",                "de": "Sauerstoffvorrat und Reichweite",              "en": "Oxygen supply and endurance" },
