@@ -1,8 +1,8 @@
-Diagnose 2026-10-31T14:21:03Z
+Diagnose 2026-10-31T19:54:15Z
 == Worker /api/status
-{"checked":"2026-10-31T14:21:03.868Z","apps":[{"id":"gafor","ok":true,"code":200,"ms":287},{"id":"stueve","ok":true,"code":200,"ms":231},{"id":"cockpit","ok":true,"code":200,"ms":298},{"id":"o2","ok":true,"code":200,"ms":287},{"id":"ops","ok":true,"code":200,"ms":244},{"id":"checklists","ok":true,"code":200,"ms":201},{"id":"reporting","ok":true,"code":200,"ms":397},{"id":"analyze","ok":true,"code":200,"ms":447},{"id":"s2planning","ok":true,"code":200,"ms":432},{"id":"s2ground","ok":true,"code":200,"ms":434},{"id":"s2stueve","ok":true,"code":200,"ms":597},{"id":"gb26praesi","ok":true,"code":200,"ms":488}]}
+{"checked":"2026-10-31T19:54:15.786Z","apps":[{"id":"gafor","ok":true,"code":200,"ms":274},{"id":"stueve","ok":true,"code":200,"ms":180},{"id":"cockpit","ok":true,"code":200,"ms":220},{"id":"o2","ok":true,"code":200,"ms":229},{"id":"ops","ok":true,"code":200,"ms":212},{"id":"checklists","ok":true,"code":200,"ms":181},{"id":"reporting","ok":true,"code":200,"ms":345},{"id":"analyze","ok":true,"code":200,"ms":380},{"id":"s2planning","ok":true,"code":200,"ms":470},{"id":"s2ground","ok":true,"code":200,"ms":369},{"id":"s2stueve","ok":true,"code":200,"ms":508},{"id":"gb26praesi","ok":true,"code":200,"ms":455},{"id":"diashow","ok":false,"code":526,"ms":427}]}
 == Worker /api/usage
-{"apps":{}}
+{"apps":{"reporting":{"last":"2026-10-31T15:29:18.336Z","count":4},"stueve":{"last":"2026-10-31T17:43:22.790Z","count":21},"o2":{"last":"2026-10-31T14:30:22.584Z","count":1},"analyze":{"last":"2026-10-31T14:32:44.951Z","count":1}}}
 == hit.js
 code=200
 == Worker zweiter Abruf (Cache)
@@ -14,12 +14,12 @@ ns.udag.net.
 ns.udag.org.
 == stuevecast @1.1.1.1
 == stuevecast @8.8.8.8
-;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 53918
-wicki.aero.		3600	IN	SOA	ns.udag.de. hostmaster.united-domains.de. 2021020921 10800 3600 604800 3600
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 16547
+wicki.aero.		3600	IN	SOA	ns.udag.de. hostmaster.united-domains.de. 2021020922 10800 3600 604800 3600
 == gaforeurope @1.1.1.1
 == gaforeurope @8.8.8.8
-;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 45967
-wicki.aero.		3600	IN	SOA	ns.udag.de. hostmaster.united-domains.de. 2021020921 10800 3600 604800 3600
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 59014
+wicki.aero.		3600	IN	SOA	ns.udag.de. hostmaster.united-domains.de. 2021020922 10800 3600 604800 3600
 == www @1.1.1.1
 ext-cust.squarespace.com.
 198.185.159.144
@@ -29,10 +29,10 @@ ext-cust.squarespace.com.
 == www @8.8.8.8
 ext-cust.squarespace.com.
 198.49.23.145
-198.185.159.145
-198.49.23.144
 198.185.159.144
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11528
+198.49.23.144
+198.185.159.145
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36832
 == stueve @1.1.1.1
 bwicki.github.io.
 185.199.108.153
@@ -42,34 +42,34 @@ bwicki.github.io.
 == stueve @8.8.8.8
 bwicki.github.io.
 185.199.111.153
+185.199.109.153
 185.199.108.153
 185.199.110.153
-185.199.109.153
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 15178
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54873
 == stuevecast: DNS
 == stuevecast: GET (Runner)
 curl: (6) Could not resolve host: stuevecast.wicki.aero
-code=000 redirects=0 final=https://stuevecast.wicki.aero/ t=0.063439
+code=000 redirects=0 final=https://stuevecast.wicki.aero/ t=0.063447
 == stuevecast: Kopfzeilen
 curl: (6) Could not resolve host: stuevecast.wicki.aero
 == gafor: DNS
 bwicki.github.io.
+185.199.108.153
 185.199.109.153
 185.199.110.153
 185.199.111.153
-185.199.108.153
 == gafor: GET (Runner)
-code=200 redirects=0 final=https://gafor.wicki.aero/ t=0.130465
+code=200 redirects=0 final=https://gafor.wicki.aero/ t=0.106413
 == gafor: Kopfzeilen
 HTTP/2 200 
 server: GitHub.com
 content-type: text/html; charset=utf-8
-last-modified: Sat, 31 Oct 2026 14:19:52 GMT
+last-modified: Sat, 31 Oct 2026 17:19:09 GMT
 access-control-allow-origin: *
 strict-transport-security: max-age=31556952
-etag: "6ae5f908-570d"
-expires: Sat, 31 Oct 2026 14:31:06 GMT
+etag: "6ae6230d-570d"
+expires: Sat, 31 Oct 2026 20:04:17 GMT
 cache-control: max-age=600
 x-proxy-cache: MISS
-x-github-request-id: 3EC8:23A732:9D24D8:C8065B:6AE5F951
+x-github-request-id: CDD2:1112D5:1BB4200:1F484DD:6AE64769
 x-github-edge-region: iad
