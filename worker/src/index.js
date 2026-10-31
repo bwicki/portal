@@ -1,21 +1,26 @@
-// portal-api – prüft, ob die Apps unter *.wicki.aero erreichbar sind, und wie schnell.
-// GET /api/status  → { checked, apps: [{ id, ok, code, ms }] }   (60 s zwischengespeichert)
-// GET /api/health  → { ok: true, version }
-// Keine Datenbank, keine Secrets. Die App-Liste kommt beim Deploy aus ../../apps.json.
+// portal-api – Statusprüfung der Apps und Nutzungszähler.
+// GET  /api/status       → { checked, apps: [{ id, ok, code, ms }] }   (60 s zwischengespeichert)
+// POST /api/hit?app=ID   ← jede App meldet ihren Aufruf (Skript https://portal.wicki.aero/hit.js)
+// GET  /api/usage        → { apps: { ID: { last, count } } }
+// GET  /api/health       → { ok: true, version }
+// Gespeichert wird je App nur «zuletzt benutzt» (Zeitpunkt) und die Anzahl Aufrufe – keine Personen-,
+// Geräte- oder IP-Daten. Speicher: ein Durable Object (SQLite), keine Secrets, keine weitere Einrichtung.
 import list from '../../apps.json';
 
 const CACHE_S = 60;
 const TIMEOUT_MS = 8000;
+const IDS = new Set((list.apps || []).map(a => a.id));
 
 function cors(req, env) {
   const origin = req.headers.get('Origin') || '';
   const allowed = (env.ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean);
-  const h = { 'Vary': 'Origin', 'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Max-Age': '86400' };
-  if (allowed.includes(origin)) h['Access-Control-Allow-Origin'] = origin;
+  const h = { 'Vary': 'Origin', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Max-Age': '86400' };
+  if (allowed.includes(origin) || /^https:\/\/[a-z0-9-]+\.wicki\.aero$/.test(origin)) h['Access-Control-Allow-Origin'] = origin;
   return h;
 }
-const json = (obj, req, env, extra) => new Response(JSON.stringify(obj), {
-  headers: { 'Content-Type': 'application/json; charset=utf-8', ...cors(req, env), ...(extra || {}) }
+const json = (obj, req, env, status, extra) => new Response(JSON.stringify(obj), {
+  status: status || 200,
+  headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', ...cors(req, env), ...(extra || {}) }
 });
 
 async function probe(app, domain) {
@@ -33,14 +38,43 @@ async function probe(app, domain) {
   } finally { clearTimeout(to); }
 }
 
+// Nutzungszähler: ein einziges Objekt «global», je App eine Zeile.
+export class Usage {
+  constructor(state) {
+    this.sql = state.storage.sql;
+    this.sql.exec('CREATE TABLE IF NOT EXISTS usage (app TEXT PRIMARY KEY, last TEXT NOT NULL, count INTEGER NOT NULL DEFAULT 0)');
+  }
+  async fetch(req) {
+    const url = new URL(req.url);
+    if (url.pathname === '/hit') {
+      const app = url.searchParams.get('app');
+      this.sql.exec('INSERT INTO usage (app, last, count) VALUES (?, ?, 1) ON CONFLICT(app) DO UPDATE SET last = excluded.last, count = count + 1', app, new Date().toISOString());
+      return new Response('ok');
+    }
+    const apps = {};
+    for (const r of this.sql.exec('SELECT app, last, count FROM usage')) apps[r.app] = { last: r.last, count: r.count };
+    return Response.json({ apps });
+  }
+}
+const usage = env => env.USAGE.get(env.USAGE.idFromName('global'));
+
 export default {
   async fetch(req, env, ctx) {
     const url = new URL(req.url);
     if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(req, env) });
     if (url.pathname === '/api/health') return json({ ok: true, version: env.APP_VERSION || '' }, req, env);
-    if (url.pathname !== '/api/status') {
-      return new Response('{"error":"not found"}', { status: 404, headers: { 'Content-Type': 'application/json', ...cors(req, env) } });
+
+    if (url.pathname === '/api/hit') {
+      const app = url.searchParams.get('app') || '';
+      if (!IDS.has(app)) return json({ error: 'unknown app' }, req, env, 400);
+      ctx.waitUntil(usage(env).fetch('https://usage/hit?app=' + encodeURIComponent(app)));
+      return new Response(null, { status: 204, headers: cors(req, env) });
     }
+    if (url.pathname === '/api/usage') {
+      const r = await usage(env).fetch('https://usage/list');
+      return json(await r.json(), req, env);
+    }
+    if (url.pathname !== '/api/status') return json({ error: 'not found' }, req, env, 404);
 
     const cache = caches.default;
     const key = new Request(url.origin + '/api/status');

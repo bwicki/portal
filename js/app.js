@@ -15,7 +15,7 @@
   // Übernahme aus 0.1.0 (nur Reihenfolge, ohne Zeit)
   LS.get('recent', []).forEach((id, i) => { if (!usedAt[id]) usedAt[id] = 0; });
   const recentIds = () => Object.keys(usedAt).sort((a, b) => usedAt[b] - usedAt[a]);
-  let APPS = [], PHASES = [], REPOS = {}, STATUS = {}, statusTime = null, statusSource = '';
+  let APPS = [], PHASES = [], REPOS = {}, STATUS = {}, USAGE = {}, statusTime = null, statusSource = '';
   let timer = null;
 
   const t = (k, vars) => {
@@ -124,8 +124,24 @@
     const n = document.querySelector('[data-used="' + id + '"]');
     if (n) n.textContent = usedText(id);
   }
+  // «benutzt»: der spätere Zeitpunkt aus dem Zähler aller Geräte (Worker) und dem Portal-Aufruf auf diesem Gerät
+  function lastUsed(id) {
+    const srv = USAGE[id] && USAGE[id].last ? Date.parse(USAGE[id].last) : 0;
+    return Math.max(srv || 0, usedAt[id] || 0);
+  }
+  async function loadUsage() {
+    if (!C.statusApi) return;
+    try {
+      const r = await fetch(C.statusApi.replace(/\/$/, '') + '/api/usage', { cache: 'no-store' });
+      if (r.ok) { USAGE = (await r.json()).apps || {}; APPS.forEach(a => { const n = document.querySelector('[data-used="' + a.id + '"]'); if (n) { n.textContent = usedText(a.id); n.title = usedTitle(a.id); } }); }
+    } catch (e) { /* ohne Zähler weiter */ }
+  }
+  function usedTitle(id) {
+    const u = USAGE[id];
+    return u && u.count ? t('usedCount', { n: u.count }) : '';
+  }
   function usedText(id) {
-    const ms = usedAt[id];
+    const ms = lastUsed(id);
     if (!ms) return t('usedNever');
     const d = new Date(ms), now = new Date();
     const day = x => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
@@ -160,7 +176,7 @@
       el('span', { class: 'app-meta app-meta2' }, [
         el('span', { class: 'ver-t', text: verText(a) }),
         el('span', { text: standText(a) }),
-        el('span', { class: 'used', 'data-used': a.id, text: usedText(a.id) })
+        el('span', { class: 'used', 'data-used': a.id, text: usedText(a.id), title: usedTitle(a.id) || null })
       ])
     ]);
     const tools = el('div', { class: 'app-tools' }, [
@@ -268,8 +284,8 @@
     try { const j = await loadJson('apps.json'); APPS = j.apps || []; PHASES = j.phases || []; }
     catch (e) { $('#phases').textContent = 'apps.json konnte nicht geladen werden.'; return; }
     render();
-    checkStatus();
-    timer = setInterval(() => { if (!document.hidden) checkStatus(); }, C.refreshMin * 60000);
+    checkStatus(); loadUsage();
+    timer = setInterval(() => { if (!document.hidden) { checkStatus(); loadUsage(); } }, C.refreshMin * 60000);
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden && statusTime && Date.now() - statusTime.getTime() > C.refreshMin * 60000) checkStatus();
     });

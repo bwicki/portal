@@ -1,5 +1,11 @@
 # Änderungen
 
+## 0.3.0 — 31.10.2026
+
+- «benutzt» zählt jetzt alle Aufrufe jeder App auf allen Geräten: Zähler im Worker (Durable Object), Skript `hit.js`, in alle 12 Apps eingebunden.
+- StueveCast unter stueve.wicki.aero (id `stueve`).
+- GaforCast Europa entfernt (nicht realisiert).
+
 ## 0.2.0 — 31.10.2026
 
 - Bei jeder App: Version, Stand (Datum der letzten Änderung) und «benutzt» (letzter Aufruf über das Portal, je Gerät).

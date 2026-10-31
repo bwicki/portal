@@ -1,4 +1,4 @@
-# portal-api – Statusprüfung der Apps (Cloudflare Worker, ohne Datenbank, ohne Secrets)
+# portal-api – Statusprüfung der Apps und Nutzungszähler (Cloudflare Worker, ohne Secrets)
 # Deploy: automatisch über GitHub Actions («Deploy worker»), siehe SETUP.md
 name = "portal-api"
 main = "src/index.js"
@@ -8,4 +8,13 @@ workers_dev = true
 [vars]
 ALLOWED_ORIGINS = "https://portal.wicki.aero,https://bwicki.github.io,http://localhost:8080,http://127.0.0.1:8080"
 DOMAIN = "wicki.aero"
-APP_VERSION = "0.2.0"
+APP_VERSION = "0.3.0"
+
+# Nutzungszähler: Durable Object mit SQLite-Speicher (im Gratis-Plan enthalten, braucht keine eigene Einrichtung)
+[[durable_objects.bindings]]
+name = "USAGE"
+class_name = "Usage"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Usage"]

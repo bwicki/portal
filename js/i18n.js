@@ -11,7 +11,7 @@ window.PORTAL_I18N = {
     sOk: 'online', sSlow: 'langsam', sDown: 'nicht erreichbar', sUnknown: 'unbekannt', sChecking: 'wird geprüft',
     favAdd: '{a} als Favorit markieren', favDel: '{a} aus den Favoriten entfernen', repo: 'Quelltext von {a} auf GitHub',
     stand: 'Stand', verTitle: 'Versionshinweise', noVersion: 'ohne Version',
-    used: 'benutzt', usedNever: 'noch nie benutzt', today: 'heute', yesterday: 'gestern'
+    used: 'benutzt', usedNever: 'noch nie benutzt', today: 'heute', yesterday: 'gestern', usedCount: '{n} Aufrufe insgesamt (alle Geräte)'
   },
   en: {
     skip: 'Skip to content', h1: 'Balloon apps', lead: 'All tools for planning, flying and debriefing in one place.',
@@ -24,6 +24,6 @@ window.PORTAL_I18N = {
     sOk: 'online', sSlow: 'slow', sDown: 'unreachable', sUnknown: 'unknown', sChecking: 'checking',
     favAdd: 'Mark {a} as favourite', favDel: 'Remove {a} from favourites', repo: 'Source of {a} on GitHub',
     stand: 'as of', verTitle: 'Release notes', noVersion: 'no version',
-    used: 'used', usedNever: 'never used', today: 'today', yesterday: 'yesterday'
+    used: 'used', usedNever: 'never used', today: 'today', yesterday: 'yesterday', usedCount: '{n} uses in total (all devices)'
   }
 };

@@ -9,7 +9,7 @@ mit Statusleuchte, Version, Stand und «zuletzt benutzt» je App, Favoriten, Suc
 **Stack:** HTML/CSS/JS ohne Build-Schritt (GitHub Pages) + Cloudflare Worker `portal-api`
 (Statusprüfung, ohne Datenbank) + GitHub Action (Versionen und Änderungen aus GitHub).
 
-Stand: Version 0.2.0 (siehe CHANGELOG.md).
+Stand: Version 0.3.0 (siehe CHANGELOG.md).
 
 ---
 
@@ -24,8 +24,8 @@ Stand: Version 0.2.0 (siehe CHANGELOG.md).
   Browser gespeichert, nicht auf einem Server.
 - **Phasen-Karten:** je App Statusleuchte, Name, Beschrieb, Subdomain und – nur bei Abweichung –
   «langsam 2.4 s» oder «nicht erreichbar»; darunter **Version**, **Stand** (Datum der letzten
-  inhaltlichen Änderung im Repository) und **benutzt** (letzter Aufruf über das Portal auf diesem
-  Gerät; Aufrufe direkt über die App-Adresse oder ein installiertes App-Symbol sieht das Portal nicht). Rechts Stern (Favorit) und Link zum
+  inhaltlichen Änderung im Repository) und **benutzt** (letzter Aufruf der App, auf irgendeinem Gerät –
+  siehe «Nutzungszähler»; Mauszeiger darauf zeigt die Anzahl Aufrufe). Rechts Stern (Favorit) und Link zum
   Quelltext auf GitHub. Apps öffnen in einem neuen Tab.
 - **Neu & geändert:** die letzten Commits über alle App-Repositories.
 
@@ -40,6 +40,20 @@ Stand: Version 0.2.0 (siehe CHANGELOG.md).
 
 Die Prüfung macht der Worker `portal-api` (60 s zwischengespeichert). Ist er nicht erreichbar,
 prüft der Browser selbst – dann nur «erreichbar ja/nein», gekennzeichnet mit «(Browserprüfung)».
+
+### Nutzungszähler
+
+Jede App bindet im `<head>` eine Zeile ein:
+
+```html
+<script src="https://portal.wicki.aero/hit.js" data-app="ops" defer></script>
+```
+
+`data-app` = `id` der App in `apps.json`. Das Skript meldet dem Worker höchstens alle 10 Minuten je
+Browser einen Aufruf. Gespeichert wird je App nur der Zeitpunkt des letzten Aufrufs und die Anzahl –
+keine Person, kein Gerät, keine IP. Abfrage: `https://portal-api.balthasar.workers.dev/api/usage`.
+Eine neue App braucht diese Zeile ebenfalls, sonst zeigt das Portal nur die Aufrufe über das Portal
+auf dem jeweiligen Gerät.
 
 ### Versionsangaben
 
@@ -80,7 +94,8 @@ Nach dem Commit deployt GitHub Pages die Seite, der Worker wird automatisch neu 
 | `js/config.js` | Version, Worker-Adresse, Schwelle «langsam», Prüfintervall |
 | `apps.json` | Liste der Apps und Phasen |
 | `data/repos.json` | von der Action erzeugt – nicht von Hand ändern |
-| `worker/` | Cloudflare Worker `portal-api` |
+| `worker/` | Cloudflare Worker `portal-api` (Status, Nutzungszähler) |
+| `hit.js` | Aufrufzähler, wird von allen Apps eingebunden |
 | `scripts/update-repos.mjs` | erzeugt `data/repos.json` |
 | `.github/workflows/` | «Deploy worker», «Update repos» |
 | `manifest.webmanifest`, `sw.js`, `icons/` | installierbar als App (PWA) |

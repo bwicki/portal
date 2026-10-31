@@ -1,6 +1,6 @@
 /* portal.wicki.aero – Konfiguration */
 window.PORTAL_CONFIG = {
-  version: '0.2.0',
+  version: '0.3.0',
   // Status-Worker (Cloudflare). Leer lassen = Status direkt aus dem Browser prüfen (nur erreichbar ja/nein).
   statusApi: 'https://portal-api.balthasar.workers.dev',
   domain: 'wicki.aero',
