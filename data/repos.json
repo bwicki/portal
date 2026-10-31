@@ -1,8 +1,10 @@
 {
- "generated": "2026-10-31T12:23:03.302Z",
+ "generated": "2026-10-31T13:39:48.689Z",
  "repos": {
   "bwicki/gafor": {
-   "version": null,
+   "version": "1.21.0",
+   "version_source": "js/version.js",
+   "updated": "2026-10-31T12:14:44Z",
    "pushed": "2026-10-31T12:14:45Z",
    "commits": [
     {
@@ -29,6 +31,8 @@
   },
   "bwicki/gaforcasteurope": {
    "version": null,
+   "version_source": null,
+   "updated": "2026-09-17T12:55:21Z",
    "pushed": "2026-09-17T12:55:21Z",
    "commits": [
     {
@@ -42,7 +46,9 @@
    ]
   },
   "bwicki/stueve": {
-   "version": null,
+   "version": "0.12.0",
+   "version_source": "js/app.js",
+   "updated": "2026-08-26T20:02:49Z",
    "pushed": "2026-08-26T20:02:50Z",
    "commits": [
     {
@@ -68,7 +74,9 @@
    ]
   },
   "bwicki/cockpit": {
-   "version": null,
+   "version": "260824.21-1720",
+   "version_source": "index.html",
+   "updated": "2026-08-25T16:59:08Z",
    "pushed": "2026-08-25T16:59:09Z",
    "commits": [
     {
@@ -93,34 +101,10 @@
     }
    ]
   },
-  "bwicki/s2_flightplanning": {
-   "version": null,
-   "pushed": "2026-08-27T21:24:32Z",
-   "commits": [
-    {
-     "date": "2026-08-27T21:24:31Z",
-     "msg": "c"
-    },
-    {
-     "date": "2026-08-27T21:18:03Z",
-     "msg": "c"
-    },
-    {
-     "date": "2026-08-27T20:39:28Z",
-     "msg": "c"
-    },
-    {
-     "date": "2026-08-27T20:20:19Z",
-     "msg": "c"
-    },
-    {
-     "date": "2026-08-27T20:05:38Z",
-     "msg": "c"
-    }
-   ]
-  },
   "bwicki/o2": {
    "version": "0.3.1",
+   "version_source": "js/version.js",
+   "updated": "2026-10-12T07:16:05Z",
    "pushed": "2026-10-12T07:16:06Z",
    "commits": [
     {
@@ -146,9 +130,15 @@
    ]
   },
   "bwicki/ops": {
-   "version": null,
-   "pushed": "2026-10-31T08:54:21Z",
+   "version": "0.14.3",
+   "version_source": "js/version.js",
+   "updated": "2026-10-31T13:17:56Z",
+   "pushed": "2026-10-31T13:17:58Z",
    "commits": [
+    {
+     "date": "2026-10-31T13:17:56Z",
+     "msg": "NOTAM 2026-10-31 13:17 UTC"
+    },
     {
      "date": "2026-10-31T08:54:19Z",
      "msg": "DWD/METAR 2026-10-31 08:54 UTC"
@@ -164,15 +154,13 @@
     {
      "date": "2026-10-31T00:57:03Z",
      "msg": "NOTAM 2026-10-31 00:57 UTC"
-    },
-    {
-     "date": "2026-10-30T23:15:45Z",
-     "msg": "DWD/METAR 2026-10-30 23:15 UTC"
     }
    ]
   },
   "bwicki/checklists": {
    "version": "0.2.0",
+   "version_source": "js/version.js",
+   "updated": "2026-10-25T07:51:36Z",
    "pushed": "2026-10-25T07:51:39Z",
    "commits": [
     {
@@ -198,9 +186,15 @@
    ]
   },
   "bwicki/gb_notion_frontend": {
-   "version": null,
-   "pushed": "2026-10-18T20:17:23Z",
+   "version": "261031-01",
+   "version_source": "index.html",
+   "updated": "2026-10-31T13:38:48Z",
+   "pushed": "2026-10-31T13:38:50Z",
    "commits": [
+    {
+     "date": "2026-10-31T13:38:48Z",
+     "msg": "v261031-01 — viewer join code: read-only access to the archive"
+    },
     {
      "date": "2026-10-18T20:17:21Z",
      "msg": "v261018-02 — windows stay above the Android keyboard"
@@ -216,15 +210,69 @@
     {
      "date": "2026-10-17T08:27:54Z",
      "msg": "v261017-02 — overdue Ops Normal alarm repeats for ten minutes, not thirty"
+    }
+   ]
+  },
+  "bwicki/analyze": {
+   "version": "0.15.8",
+   "version_source": "src/state.js",
+   "updated": "2026-10-31T13:30:08Z",
+   "pushed": "2026-10-31T13:30:10Z",
+   "commits": [
+    {
+     "date": "2026-10-31T13:30:08Z",
+     "msg": "0.15.8: Meldungen bleiben stehen – Kacheln mit Kopieren/Schliessen (Fehler bis zum Schliessen, Hinweise 7 s, gestapelt), Fenster «Meldungen»"
     },
     {
-     "date": "2026-10-17T08:09:27Z",
-     "msg": "v261017-01 — Ops Normal countdown in the header, with an audible warning"
+     "date": "2026-10-31T13:20:35Z",
+     "msg": "0.15.8 (Teil 1): ops-Übergabe über Service-Binding OPS → briefing-api statt über die öffentliche workers.dev-Adresse; Diagnoseroute GET /api"
+    },
+    {
+     "date": "2026-10-30T22:56:40Z",
+     "msg": "0.15.7: ops-Übergabe – ops-Fehlertext und Route in der Meldung, fehlgeschlagene Übergaben/Listenabrufe im Nutzungsprotokoll, Zeile «Neue Fah"
+    },
+    {
+     "date": "2026-10-30T22:46:27Z",
+     "msg": "ops handover check: Diagnose-Workflow (Liste + PUT mit leerem Paket, nur Statuscodes)"
+    },
+    {
+     "date": "2026-10-29T18:28:31Z",
+     "msg": "0.15.6: Schritt 5 – «Alles als ZIP» als hervorgehobener Knopf neben der Auflösung; ops-Übergabe auch in Karte 5"
+    }
+   ]
+  },
+  "bwicki/s2_flightplanning": {
+   "version": "1.67.0",
+   "version_source": "app.js",
+   "updated": "2026-08-27T21:24:31Z",
+   "pushed": "2026-08-27T21:24:32Z",
+   "commits": [
+    {
+     "date": "2026-08-27T21:24:31Z",
+     "msg": "c"
+    },
+    {
+     "date": "2026-08-27T21:18:03Z",
+     "msg": "c"
+    },
+    {
+     "date": "2026-08-27T20:39:28Z",
+     "msg": "c"
+    },
+    {
+     "date": "2026-08-27T20:20:19Z",
+     "msg": "c"
+    },
+    {
+     "date": "2026-08-27T20:05:38Z",
+     "msg": "c"
     }
    ]
   },
   "bwicki/s2ground": {
-   "version": "3.11.8",
+   "version": "0.3",
+   "version_source": "src/version.js",
+   "updated": "2026-10-30T22:59:12Z",
    "pushed": "2026-10-31T09:39:26Z",
    "commits": [
     {
@@ -249,34 +297,10 @@
     }
    ]
   },
-  "bwicki/analyze": {
-   "version": "0.15.7",
-   "pushed": "2026-10-30T22:56:42Z",
-   "commits": [
-    {
-     "date": "2026-10-30T22:56:40Z",
-     "msg": "0.15.7: ops-Übergabe – ops-Fehlertext und Route in der Meldung, fehlgeschlagene Übergaben/Listenabrufe im Nutzungsprotokoll, Zeile «Neue Fah"
-    },
-    {
-     "date": "2026-10-30T22:46:27Z",
-     "msg": "ops handover check: Diagnose-Workflow (Liste + PUT mit leerem Paket, nur Statuscodes)"
-    },
-    {
-     "date": "2026-10-29T18:28:31Z",
-     "msg": "0.15.6: Schritt 5 – «Alles als ZIP» als hervorgehobener Knopf neben der Auflösung; ops-Übergabe auch in Karte 5"
-    },
-    {
-     "date": "2026-10-29T18:19:27Z",
-     "msg": "Vorschau Fahrt K86TYXJN"
-    },
-    {
-     "date": "2026-10-29T17:34:54Z",
-     "msg": "Vorschau Fahrt K86TYXJN"
-    }
-   ]
-  },
   "bwicki/s2_stueve": {
-   "version": null,
+   "version": "1.03.04",
+   "version_source": "index.html",
+   "updated": "2026-10-18T20:30:32Z",
    "pushed": "2026-10-18T20:30:35Z",
    "commits": [
     {
@@ -302,7 +326,9 @@
    ]
   },
   "bwicki/gb26praesi": {
-   "version": "0.1.0",
+   "version": "0.1.1",
+   "version_source": "assets/js/version.js",
+   "updated": "2026-10-22T07:14:20Z",
    "pushed": "2026-10-22T07:14:22Z",
    "commits": [
     {
