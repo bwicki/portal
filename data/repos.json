@@ -1,12 +1,16 @@
 {
- "generated": "2026-10-31T21:30:37.279Z",
+ "generated": "2026-11-01T01:08:15.482Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-10-31T20:33:05Z",
-   "pushed": "2026-10-31T20:33:06Z",
+   "updated": "2026-10-31T23:47:45Z",
+   "pushed": "2026-10-31T23:47:46Z",
    "commits": [
+    {
+     "date": "2026-10-31T23:47:45Z",
+     "msg": "DWD-Berichte 2026-10-31 23:47 UTC"
+    },
     {
      "date": "2026-10-31T20:33:05Z",
      "msg": "DWD-Berichte 2026-10-31 20:33 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-10-31T12:14:44Z",
      "msg": "DWD-Berichte 2026-10-31 12:14 UTC"
-    },
-    {
-     "date": "2026-10-31T06:02:36Z",
-     "msg": "DWD-Berichte 2026-10-31 06:02 UTC"
     }
    ]
   },
@@ -116,9 +116,17 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-10-31T20:59:29Z",
-   "pushed": "2026-10-31T20:59:31Z",
+   "updated": "2026-10-31T23:57:03Z",
+   "pushed": "2026-10-31T23:57:05Z",
    "commits": [
+    {
+     "date": "2026-10-31T23:57:03Z",
+     "msg": "NOTAM 2026-10-31 23:57 UTC"
+    },
+    {
+     "date": "2026-10-31T22:37:14Z",
+     "msg": "DWD/METAR 2026-10-31 22:37 UTC"
+    },
     {
      "date": "2026-10-31T20:59:29Z",
      "msg": "NOTAM 2026-10-31 20:59 UTC"
@@ -130,14 +138,6 @@
     {
      "date": "2026-10-31T17:51:38Z",
      "msg": "NOTAM 2026-10-31 17:51 UTC"
-    },
-    {
-     "date": "2026-10-31T15:15:46Z",
-     "msg": "DWD/METAR 2026-10-31 15:15 UTC"
-    },
-    {
-     "date": "2026-10-31T14:19:22Z",
-     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
     }
    ]
   },
@@ -338,30 +338,30 @@
    ]
   },
   "bwicki/diashow": {
-   "version": "1.1.0",
+   "version": "1.4.1",
    "version_source": "commit",
-   "updated": "2026-10-31T20:28:10Z",
-   "pushed": "2026-10-31T20:28:12Z",
+   "updated": "2026-11-01T00:08:21Z",
+   "pushed": "2026-11-01T00:08:23Z",
    "commits": [
     {
-     "date": "2026-10-31T20:28:10Z",
-     "msg": "1.1.0: Titelfolien-Editor, Wasserzeichen, Mehrfachauswahl"
+     "date": "2026-11-01T00:08:21Z",
+     "msg": "1.4.1: Grossansicht im Editor, Knöpfe ohne Umbruch"
     },
     {
-     "date": "2026-10-31T20:18:59Z",
-     "msg": "1.0.4: helles Favicon und App-Icon (V3 Ballon mit Play)"
+     "date": "2026-10-31T23:46:58Z",
+     "msg": "1.4.0: Kapitel, Zuschneiden, Hochformat-Hintergrund, Karten-Folie, Bildtext aus Aufnahmedaten, Probelauf"
     },
     {
-     "date": "2026-10-31T20:14:02Z",
-     "msg": "Favicon: fünf helle Vorschläge in icons/variants"
+     "date": "2026-10-31T23:21:01Z",
+     "msg": "1.3.1: Meldungen im Protokoll hinter Kopfzeilen-Symbol statt Leiste"
     },
     {
-     "date": "2026-10-31T20:13:54Z",
-     "msg": "1.0.3: Auswählen & weiter springt am Ordnerende in den nächsten Ordner"
+     "date": "2026-10-31T23:15:15Z",
+     "msg": "1.3.0: Wasserzeichen-Platte, schnelle Grössenänderung, Filter und Hinweise im Editor, Beamer-Auflösung"
     },
     {
-     "date": "2026-10-31T20:10:10Z",
-     "msg": "1.0.2: Grossansicht hell mit «Auswählen & weiter» (Enter)"
+     "date": "2026-10-31T22:55:55Z",
+     "msg": "1.2.0: Qualitätshinweise (Auflösung, Unschärfe, Doubletten), Titelfolie-Dialog, Überschreibschutz"
     }
    ]
   }
