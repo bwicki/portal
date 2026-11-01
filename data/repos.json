@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-01T07:30:18.635Z",
+ "generated": "2026-11-01T15:05:40.460Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-01T05:52:19Z",
-   "pushed": "2026-11-01T05:52:20Z",
+   "updated": "2026-11-01T13:11:54Z",
+   "pushed": "2026-11-01T13:11:55Z",
    "commits": [
+    {
+     "date": "2026-11-01T13:11:54Z",
+     "msg": "DWD-Berichte 2026-11-01 13:11 UTC"
+    },
     {
      "date": "2026-11-01T05:52:19Z",
      "msg": "DWD-Berichte 2026-11-01 05:52 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-10-31T17:18:34Z",
      "msg": "DWD-Berichte 2026-10-31 17:18 UTC"
-    },
-    {
-     "date": "2026-10-31T14:19:14Z",
-     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
     }
    ]
   },
@@ -116,9 +116,21 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-01T04:26:50Z",
-   "pushed": "2026-11-01T04:26:52Z",
+   "updated": "2026-11-01T14:58:28Z",
+   "pushed": "2026-11-01T14:58:30Z",
    "commits": [
+    {
+     "date": "2026-11-01T14:58:28Z",
+     "msg": "DWD/METAR 2026-11-01 14:58 UTC"
+    },
+    {
+     "date": "2026-11-01T11:25:36Z",
+     "msg": "NOTAM 2026-11-01 11:25 UTC"
+    },
+    {
+     "date": "2026-11-01T07:51:46Z",
+     "msg": "DWD/METAR 2026-11-01 07:51 UTC"
+    },
     {
      "date": "2026-11-01T04:26:50Z",
      "msg": "NOTAM 2026-11-01 04:26 UTC"
@@ -126,18 +138,6 @@
     {
      "date": "2026-11-01T01:29:08Z",
      "msg": "DWD/METAR 2026-11-01 01:29 UTC"
-    },
-    {
-     "date": "2026-10-31T23:57:03Z",
-     "msg": "NOTAM 2026-10-31 23:57 UTC"
-    },
-    {
-     "date": "2026-10-31T22:37:14Z",
-     "msg": "DWD/METAR 2026-10-31 22:37 UTC"
-    },
-    {
-     "date": "2026-10-31T20:59:29Z",
-     "msg": "NOTAM 2026-10-31 20:59 UTC"
     }
    ]
   },
@@ -257,7 +257,7 @@
    "version": "0.3",
    "version_source": "src/version.js",
    "updated": "2026-10-31T14:19:33Z",
-   "pushed": "2026-10-31T14:19:35Z",
+   "pushed": "2026-11-01T10:28:00Z",
    "commits": [
     {
      "date": "2026-10-31T14:19:33Z",
