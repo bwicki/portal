@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-01T01:08:15.482Z",
+ "generated": "2026-11-01T07:30:18.635Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-10-31T23:47:45Z",
-   "pushed": "2026-10-31T23:47:46Z",
+   "updated": "2026-11-01T05:52:19Z",
+   "pushed": "2026-11-01T05:52:20Z",
    "commits": [
+    {
+     "date": "2026-11-01T05:52:19Z",
+     "msg": "DWD-Berichte 2026-11-01 05:52 UTC"
+    },
     {
      "date": "2026-10-31T23:47:45Z",
      "msg": "DWD-Berichte 2026-10-31 23:47 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-10-31T14:19:14Z",
      "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
-    },
-    {
-     "date": "2026-10-31T12:14:44Z",
-     "msg": "DWD-Berichte 2026-10-31 12:14 UTC"
     }
    ]
   },
@@ -116,9 +116,17 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-10-31T23:57:03Z",
-   "pushed": "2026-10-31T23:57:05Z",
+   "updated": "2026-11-01T04:26:50Z",
+   "pushed": "2026-11-01T04:26:52Z",
    "commits": [
+    {
+     "date": "2026-11-01T04:26:50Z",
+     "msg": "NOTAM 2026-11-01 04:26 UTC"
+    },
+    {
+     "date": "2026-11-01T01:29:08Z",
+     "msg": "DWD/METAR 2026-11-01 01:29 UTC"
+    },
     {
      "date": "2026-10-31T23:57:03Z",
      "msg": "NOTAM 2026-10-31 23:57 UTC"
@@ -130,14 +138,6 @@
     {
      "date": "2026-10-31T20:59:29Z",
      "msg": "NOTAM 2026-10-31 20:59 UTC"
-    },
-    {
-     "date": "2026-10-31T19:24:08Z",
-     "msg": "DWD/METAR 2026-10-31 19:24 UTC"
-    },
-    {
-     "date": "2026-10-31T17:51:38Z",
-     "msg": "NOTAM 2026-10-31 17:51 UTC"
     }
    ]
   },
@@ -338,11 +338,23 @@
    ]
   },
   "bwicki/diashow": {
-   "version": "1.4.1",
+   "version": "1.5.1",
    "version_source": "commit",
-   "updated": "2026-11-01T00:08:21Z",
-   "pushed": "2026-11-01T00:08:23Z",
+   "updated": "2026-11-01T04:16:06Z",
+   "pushed": "2026-11-01T04:16:08Z",
    "commits": [
+    {
+     "date": "2026-11-01T04:16:06Z",
+     "msg": "1.5.1: Referentensicht auf einem Bildschirm steuerbar, Fenster-Modus"
+    },
+    {
+     "date": "2026-11-01T04:14:47Z",
+     "msg": "1.5.0: Sprung per Dia-Nummer, Kapitel per Buchstabe"
+    },
+    {
+     "date": "2026-11-01T04:01:06Z",
+     "msg": "1.4.2: Filter Hoch-/Querformat, Grossansicht im Beamer-Format, Bildtext weicht Logo aus"
+    },
     {
      "date": "2026-11-01T00:08:21Z",
      "msg": "1.4.1: Grossansicht im Editor, Knöpfe ohne Umbruch"
@@ -350,18 +362,6 @@
     {
      "date": "2026-10-31T23:46:58Z",
      "msg": "1.4.0: Kapitel, Zuschneiden, Hochformat-Hintergrund, Karten-Folie, Bildtext aus Aufnahmedaten, Probelauf"
-    },
-    {
-     "date": "2026-10-31T23:21:01Z",
-     "msg": "1.3.1: Meldungen im Protokoll hinter Kopfzeilen-Symbol statt Leiste"
-    },
-    {
-     "date": "2026-10-31T23:15:15Z",
-     "msg": "1.3.0: Wasserzeichen-Platte, schnelle Grössenänderung, Filter und Hinweise im Editor, Beamer-Auflösung"
-    },
-    {
-     "date": "2026-10-31T22:55:55Z",
-     "msg": "1.2.0: Qualitätshinweise (Auflösung, Unschärfe, Doubletten), Titelfolie-Dialog, Überschreibschutz"
     }
    ]
   }
