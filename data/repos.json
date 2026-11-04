@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-04T17:13:25.595Z",
+ "generated": "2026-11-04T22:37:30.840Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-04T02:34:19Z",
-   "pushed": "2026-11-04T02:34:20Z",
+   "updated": "2026-11-04T17:57:23Z",
+   "pushed": "2026-11-04T17:57:25Z",
    "commits": [
+    {
+     "date": "2026-11-04T17:57:23Z",
+     "msg": "DWD-Berichte 2026-11-04 17:57 UTC"
+    },
     {
      "date": "2026-11-04T02:34:19Z",
      "msg": "DWD-Berichte 2026-11-04 02:34 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-11-03T09:27:30Z",
      "msg": "DWD-Berichte 2026-11-03 09:27 UTC"
-    },
-    {
-     "date": "2026-11-03T01:49:31Z",
-     "msg": "DWD-Berichte 2026-11-03 01:49 UTC"
     }
    ]
   },
@@ -116,9 +116,17 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-04T15:05:44Z",
-   "pushed": "2026-11-04T15:05:47Z",
+   "updated": "2026-11-04T21:23:57Z",
+   "pushed": "2026-11-04T21:23:59Z",
    "commits": [
+    {
+     "date": "2026-11-04T21:23:57Z",
+     "msg": "NOTAM 2026-11-04 21:23 UTC"
+    },
+    {
+     "date": "2026-11-04T17:33:36Z",
+     "msg": "DWD/METAR 2026-11-04 17:33 UTC"
+    },
     {
      "date": "2026-11-04T15:05:44Z",
      "msg": "NOTAM 2026-11-04 15:05 UTC"
@@ -130,14 +138,6 @@
     {
      "date": "2026-11-04T06:50:35Z",
      "msg": "NOTAM 2026-11-04 06:50 UTC"
-    },
-    {
-     "date": "2026-11-04T02:29:20Z",
-     "msg": "DWD/METAR 2026-11-04 02:29 UTC"
-    },
-    {
-     "date": "2026-11-04T00:23:02Z",
-     "msg": "NOTAM 2026-11-04 00:23 UTC"
     }
    ]
   },
@@ -338,11 +338,19 @@
    ]
   },
   "bwicki/diashow": {
-   "version": "1.7.1",
+   "version": "1.8.1",
    "version_source": "commit",
-   "updated": "2026-11-04T16:39:43Z",
-   "pushed": "2026-11-04T16:39:45Z",
+   "updated": "2026-11-04T20:45:06Z",
+   "pushed": "2026-11-04T20:45:07Z",
    "commits": [
+    {
+     "date": "2026-11-04T20:45:06Z",
+     "msg": "1.8.1: Bildschirm bleibt während der Vorführung an (Wake Lock)"
+    },
+    {
+     "date": "2026-11-04T20:16:16Z",
+     "msg": "1.8.0: Hintergrundmusik je Diashow und Kapitel, Ausblenden bei Videos mit Ton, Steuerung in der Referentensicht, Musik in geteilten Links"
+    },
     {
      "date": "2026-11-04T16:39:43Z",
      "msg": "1.7.1: Bildtext-Einstellungen sichtbar, Service Worker ohne veralteten Cache"
@@ -354,14 +362,6 @@
     {
      "date": "2026-11-02T07:03:22Z",
      "msg": "1.6.0: Diashow über Link teilen (Worker diashow-api, R2, D1), Betrachter, Aufrufstatistik im Menü"
-    },
-    {
-     "date": "2026-11-01T04:16:06Z",
-     "msg": "1.5.1: Referentensicht auf einem Bildschirm steuerbar, Fenster-Modus"
-    },
-    {
-     "date": "2026-11-01T04:14:47Z",
-     "msg": "1.5.0: Sprung per Dia-Nummer, Kapitel per Buchstabe"
     }
    ]
   }
