@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T09:08:32.262Z",
+ "generated": "2026-11-04T17:13:25.595Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
@@ -116,9 +116,17 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-04T06:50:35Z",
-   "pushed": "2026-11-04T06:50:37Z",
+   "updated": "2026-11-04T15:05:44Z",
+   "pushed": "2026-11-04T15:05:47Z",
    "commits": [
+    {
+     "date": "2026-11-04T15:05:44Z",
+     "msg": "NOTAM 2026-11-04 15:05 UTC"
+    },
+    {
+     "date": "2026-11-04T09:39:52Z",
+     "msg": "DWD/METAR 2026-11-04 09:39 UTC"
+    },
     {
      "date": "2026-11-04T06:50:35Z",
      "msg": "NOTAM 2026-11-04 06:50 UTC"
@@ -130,14 +138,6 @@
     {
      "date": "2026-11-04T00:23:02Z",
      "msg": "NOTAM 2026-11-04 00:23 UTC"
-    },
-    {
-     "date": "2026-11-03T22:24:10Z",
-     "msg": "DWD/METAR 2026-11-03 22:24 UTC"
-    },
-    {
-     "date": "2026-11-03T19:57:22Z",
-     "msg": "NOTAM 2026-11-03 19:57 UTC"
     }
    ]
   },
@@ -257,7 +257,7 @@
    "version": "0.3",
    "version_source": "src/version.js",
    "updated": "2026-10-31T14:19:33Z",
-   "pushed": "2026-11-03T10:52:59Z",
+   "pushed": "2026-11-04T10:56:34Z",
    "commits": [
     {
      "date": "2026-10-31T14:19:33Z",
@@ -338,11 +338,19 @@
    ]
   },
   "bwicki/diashow": {
-   "version": "1.6.0",
+   "version": "1.7.1",
    "version_source": "commit",
-   "updated": "2026-11-02T07:03:22Z",
-   "pushed": "2026-11-02T07:03:24Z",
+   "updated": "2026-11-04T16:39:43Z",
+   "pushed": "2026-11-04T16:39:45Z",
    "commits": [
+    {
+     "date": "2026-11-04T16:39:43Z",
+     "msg": "1.7.1: Bildtext-Einstellungen sichtbar, Service Worker ohne veralteten Cache"
+    },
+    {
+     "date": "2026-11-04T16:21:55Z",
+     "msg": "1.7.0: Bildtext aus Aufnahmedaten (Ort/Datum/Zeit wählbar, nur EXIF, Ecke, ohne GPS), Schriftfarbe nach Helligkeit"
+    },
     {
      "date": "2026-11-02T07:03:22Z",
      "msg": "1.6.0: Diashow über Link teilen (Worker diashow-api, R2, D1), Betrachter, Aufrufstatistik im Menü"
@@ -354,14 +362,6 @@
     {
      "date": "2026-11-01T04:14:47Z",
      "msg": "1.5.0: Sprung per Dia-Nummer, Kapitel per Buchstabe"
-    },
-    {
-     "date": "2026-11-01T04:01:06Z",
-     "msg": "1.4.2: Filter Hoch-/Querformat, Grossansicht im Beamer-Format, Bildtext weicht Logo aus"
-    },
-    {
-     "date": "2026-11-01T00:08:21Z",
-     "msg": "1.4.1: Grossansicht im Editor, Knöpfe ohne Umbruch"
     }
    ]
   }
