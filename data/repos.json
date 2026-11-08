@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-08T00:33:02.254Z",
+ "generated": "2026-11-08T07:18:14.275Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-07T22:19:12Z",
-   "pushed": "2026-11-07T22:19:13Z",
+   "updated": "2026-11-08T01:39:41Z",
+   "pushed": "2026-11-08T01:39:42Z",
    "commits": [
+    {
+     "date": "2026-11-08T01:39:41Z",
+     "msg": "DWD-Berichte 2026-11-08 01:39 UTC"
+    },
     {
      "date": "2026-11-07T22:19:12Z",
      "msg": "DWD-Berichte 2026-11-07 22:19 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-11-07T07:02:03Z",
      "msg": "DWD-Berichte 2026-11-07 07:02 UTC"
-    },
-    {
-     "date": "2026-11-07T00:51:57Z",
-     "msg": "DWD-Berichte 2026-11-07 00:51 UTC"
     }
    ]
   },
@@ -116,9 +116,21 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-07T23:48:36Z",
-   "pushed": "2026-11-07T23:48:38Z",
+   "updated": "2026-11-08T07:11:18Z",
+   "pushed": "2026-11-08T07:11:20Z",
    "commits": [
+    {
+     "date": "2026-11-08T07:11:18Z",
+     "msg": "DWD/METAR 2026-11-08 07:11 UTC"
+    },
+    {
+     "date": "2026-11-08T04:29:33Z",
+     "msg": "NOTAM 2026-11-08 04:29 UTC"
+    },
+    {
+     "date": "2026-11-08T00:55:07Z",
+     "msg": "DWD/METAR 2026-11-08 00:55 UTC"
+    },
     {
      "date": "2026-11-07T23:48:36Z",
      "msg": "NOTAM 2026-11-07 23:48 UTC"
@@ -126,18 +138,6 @@
     {
      "date": "2026-11-07T21:43:57Z",
      "msg": "DWD/METAR 2026-11-07 21:43 UTC"
-    },
-    {
-     "date": "2026-11-07T20:24:39Z",
-     "msg": "NOTAM 2026-11-07 20:24 UTC"
-    },
-    {
-     "date": "2026-11-07T18:08:09Z",
-     "msg": "DWD/METAR 2026-11-07 18:08 UTC"
-    },
-    {
-     "date": "2026-11-07T16:06:24Z",
-     "msg": "NOTAM 2026-11-07 16:06 UTC"
     }
    ]
   },
