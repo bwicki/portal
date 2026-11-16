@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-16T02:02:01.205Z",
+ "generated": "2026-11-16T09:37:24.517Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-15T23:56:16Z",
-   "pushed": "2026-11-15T23:56:17Z",
+   "updated": "2026-11-16T06:13:47Z",
+   "pushed": "2026-11-16T06:13:48Z",
    "commits": [
+    {
+     "date": "2026-11-16T06:13:47Z",
+     "msg": "DWD-Berichte 2026-11-16 06:13 UTC"
+    },
     {
      "date": "2026-11-15T23:56:16Z",
      "msg": "DWD-Berichte 2026-11-15 23:56 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-11-15T06:15:16Z",
      "msg": "DWD-Berichte 2026-11-15 06:15 UTC"
-    },
-    {
-     "date": "2026-11-15T00:00:01Z",
-     "msg": "DWD-Berichte 2026-11-15 00:00 UTC"
     }
    ]
   },
@@ -116,9 +116,17 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-16T00:10:10Z",
-   "pushed": "2026-11-16T00:10:13Z",
+   "updated": "2026-11-16T07:02:24Z",
+   "pushed": "2026-11-16T07:02:26Z",
    "commits": [
+    {
+     "date": "2026-11-16T07:02:24Z",
+     "msg": "NOTAM 2026-11-16 07:02 UTC"
+    },
+    {
+     "date": "2026-11-16T06:09:37Z",
+     "msg": "DWD/METAR 2026-11-16 06:09 UTC"
+    },
     {
      "date": "2026-11-16T00:10:10Z",
      "msg": "NOTAM 2026-11-16 00:10 UTC"
@@ -130,14 +138,6 @@
     {
      "date": "2026-11-15T20:19:16Z",
      "msg": "DWD/METAR 2026-11-15 20:19 UTC"
-    },
-    {
-     "date": "2026-11-15T20:08:23Z",
-     "msg": "NOTAM 2026-11-15 20:08 UTC"
-    },
-    {
-     "date": "2026-11-15T14:59:30Z",
-     "msg": "DWD/METAR 2026-11-15 14:59 UTC"
     }
    ]
   },
@@ -170,11 +170,15 @@
    ]
   },
   "bwicki/gb_notion_frontend": {
-   "version": "261031-05",
+   "version": "261116-01",
    "version_source": "index.html",
-   "updated": "2026-10-31T14:58:45Z",
-   "pushed": "2026-10-31T14:58:49Z",
+   "updated": "2026-11-16T08:43:54Z",
+   "pushed": "2026-11-16T08:43:58Z",
    "commits": [
+    {
+     "date": "2026-11-16T08:43:54Z",
+     "msg": "v261116-01 — big tables, and rows the radio app writes"
+    },
     {
      "date": "2026-10-31T14:58:45Z",
      "msg": "v261031-05 — a flight can be taken out of the archive"
@@ -190,10 +194,6 @@
     {
      "date": "2026-10-31T14:02:53Z",
      "msg": "v261031-03 — try a viewer code before you send it, and prove the token"
-    },
-    {
-     "date": "2026-10-31T13:46:46Z",
-     "msg": "v261031-02 — the viewer code brought into line with the rest of the file"
     }
    ]
   },
