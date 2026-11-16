@@ -1,9 +1,16 @@
 ---
 title: "Zentrale Zugangsverwaltung über portal.wicki.aero"
-subtitle: "Konzept v0.1 · 16.11.2026 · Entwurf zur Besprechung"
+subtitle: "Konzept v0.2 · 16.11.2026 · ZURÜCKGESTELLT – nicht umgesetzt"
 author: "Balthasar Wicki · erarbeitet mit Claude"
 lang: de-CH
 ---
+
+# Status: zurückgestellt (16.11.2026)
+
+Entscheid vom 16.11.2026: Das Vorhaben wird **nicht umgesetzt**. Zu viele Abläufe hängen an den
+heutigen Anmeldungen der einzelnen Apps, und das Risiko, dass danach Dinge nicht mehr funktionieren,
+ist zu gross. Die Apps behalten ihre eigenen Zugangsregeln; das Portal bleibt eine offene Linkseite.
+Dieses Dokument dient nur als Unterlage, falls das Thema später wieder aufgenommen wird.
 
 # 1 Ziel
 
