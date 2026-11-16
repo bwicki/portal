@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T09:37:24.517Z",
+ "generated": "2026-11-16T10:21:02.264Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
@@ -172,9 +172,17 @@
   "bwicki/gb_notion_frontend": {
    "version": "261116-01",
    "version_source": "index.html",
-   "updated": "2026-11-16T08:43:54Z",
-   "pushed": "2026-11-16T08:43:58Z",
+   "updated": "2026-11-16T09:43:06Z",
+   "pushed": "2026-11-16T09:43:12Z",
    "commits": [
+    {
+     "date": "2026-11-16T09:43:06Z",
+     "msg": "Dokumente bekommen einen eigenen Stempel"
+    },
+    {
+     "date": "2026-11-16T09:37:34Z",
+     "msg": "Den Test, der beide Apps zugleich prüft, auffindbar gemacht"
+    },
     {
      "date": "2026-11-16T08:43:54Z",
      "msg": "v261116-01 — big tables, and rows the radio app writes"
@@ -186,14 +194,34 @@
     {
      "date": "2026-10-31T14:33:45Z",
      "msg": "v261031-04 — ask GitHub for a refusal, not for an opinion"
+    }
+   ]
+  },
+  "bwicki/krt2": {
+   "version": "0.7.1",
+   "version_source": "src/app.js",
+   "updated": "2026-11-16T09:43:19Z",
+   "pushed": "2026-11-16T09:43:21Z",
+   "commits": [
+    {
+     "date": "2026-11-16T09:43:19Z",
+     "msg": "README trägt seinen eigenen Dokumentstempel"
     },
     {
-     "date": "2026-10-31T14:19:27Z",
-     "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
+     "date": "2026-11-16T09:35:33Z",
+     "msg": "README auf den Stand der App gebracht"
     },
     {
-     "date": "2026-10-31T14:02:53Z",
-     "msg": "v261031-03 — try a viewer code before you send it, and prove the token"
+     "date": "2026-11-16T09:28:19Z",
+     "msg": "0.7.1: Funkprotokoll schreibt nie über eine unlesbare Fahrtabelle"
+    },
+    {
+     "date": "2026-11-16T09:21:11Z",
+     "msg": "Funkprotokoll: die geteilte Fahrtabelle dokumentiert"
+    },
+    {
+     "date": "2026-11-16T08:18:34Z",
+     "msg": "0.7.0: Funkprotokoll – Frequenzwechsel und Aussendungen als VHF in gb_flight_data"
     }
    ]
   },
@@ -339,7 +367,7 @@
   },
   "bwicki/diashow": {
    "version": "1.9.0",
-   "version_source": "commit",
+   "version_source": "js/version.js",
    "updated": "2026-11-05T06:13:48Z",
    "pushed": "2026-11-05T06:13:50Z",
    "commits": [
