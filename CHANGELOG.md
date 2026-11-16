@@ -1,5 +1,10 @@
 # Änderungen
 
+## Daten 16.11.2026 (ohne Codeänderung, Version bleibt 0.3.1)
+
+- KRT2 Memory Manager (krt2.wicki.aero) in «Fahrt» aufgenommen.
+- Diashow: Version wird aus `js/version.js` gelesen.
+
 ## 0.3.1 — 31.10.2026
 
 - Diashow (diashow.wicki.aero) in «Vorträge und sonstiges» aufgenommen.
