@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-16T10:21:02.264Z",
+ "generated": "2026-11-16T20:26:49.461Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-16T06:13:47Z",
-   "pushed": "2026-11-16T06:13:48Z",
+   "updated": "2026-11-16T16:13:12Z",
+   "pushed": "2026-11-16T16:13:13Z",
    "commits": [
+    {
+     "date": "2026-11-16T16:13:12Z",
+     "msg": "DWD-Berichte 2026-11-16 16:13 UTC"
+    },
     {
      "date": "2026-11-16T06:13:47Z",
      "msg": "DWD-Berichte 2026-11-16 06:13 UTC"
@@ -22,19 +26,19 @@
     {
      "date": "2026-11-15T14:10:42Z",
      "msg": "DWD-Berichte 2026-11-15 14:10 UTC"
-    },
-    {
-     "date": "2026-11-15T06:15:16Z",
-     "msg": "DWD-Berichte 2026-11-15 06:15 UTC"
     }
    ]
   },
   "bwicki/stueve": {
    "version": "0.12.2",
    "version_source": "js/app.js",
-   "updated": "2026-10-31T19:57:51Z",
-   "pushed": "2026-10-31T19:57:53Z",
+   "updated": "2026-11-16T10:28:14Z",
+   "pushed": "2026-11-16T10:28:16Z",
    "commits": [
+    {
+     "date": "2026-11-16T10:28:14Z",
+     "msg": "Dokumentstempel im Titel"
+    },
     {
      "date": "2026-10-31T19:57:51Z",
      "msg": "0.12.2: App heisst neu «Stüve» (Titel, Manifest, Dialoge, Dateinamen)"
@@ -50,10 +54,6 @@
     {
      "date": "2026-10-31T14:10:44Z",
      "msg": "Update CNAME"
-    },
-    {
-     "date": "2026-10-30T23:02:30Z",
-     "msg": "v0.12.1: thin out Stüve background grid on narrow plots"
     }
    ]
   },
@@ -116,9 +116,21 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-16T07:02:24Z",
-   "pushed": "2026-11-16T07:02:26Z",
+   "updated": "2026-11-16T16:53:40Z",
+   "pushed": "2026-11-16T16:53:42Z",
    "commits": [
+    {
+     "date": "2026-11-16T16:53:40Z",
+     "msg": "NOTAM 2026-11-16 16:53 UTC"
+    },
+    {
+     "date": "2026-11-16T15:36:11Z",
+     "msg": "DWD/METAR 2026-11-16 15:36 UTC"
+    },
+    {
+     "date": "2026-11-16T10:28:09Z",
+     "msg": "Dokumentstempel im Titel"
+    },
     {
      "date": "2026-11-16T07:02:24Z",
      "msg": "NOTAM 2026-11-16 07:02 UTC"
@@ -126,27 +138,19 @@
     {
      "date": "2026-11-16T06:09:37Z",
      "msg": "DWD/METAR 2026-11-16 06:09 UTC"
-    },
-    {
-     "date": "2026-11-16T00:10:10Z",
-     "msg": "NOTAM 2026-11-16 00:10 UTC"
-    },
-    {
-     "date": "2026-11-16T00:03:51Z",
-     "msg": "DWD/METAR 2026-11-16 00:03 UTC"
-    },
-    {
-     "date": "2026-11-15T20:19:16Z",
-     "msg": "DWD/METAR 2026-11-15 20:19 UTC"
     }
    ]
   },
   "bwicki/checklists": {
    "version": "0.2.0",
    "version_source": "js/version.js",
-   "updated": "2026-10-31T14:19:25Z",
-   "pushed": "2026-10-31T14:19:27Z",
+   "updated": "2026-11-16T10:28:11Z",
+   "pushed": "2026-11-16T10:28:13Z",
    "commits": [
+    {
+     "date": "2026-11-16T10:28:11Z",
+     "msg": "Dokumentstempel im Titel"
+    },
     {
      "date": "2026-10-31T14:19:25Z",
      "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
@@ -162,10 +166,6 @@
     {
      "date": "2026-10-24T20:03:23Z",
      "msg": "Deploy worker: vor der Einrichtung überspringen statt fehlschlagen"
-    },
-    {
-     "date": "2026-10-24T19:35:05Z",
-     "msg": "Grundgerüst v0.1: Worker-Setup-Workflow, Schema, Health-Endpoint, SETUP.md, Startseite, Lizenz"
     }
    ]
   },
@@ -198,39 +198,43 @@
    ]
   },
   "bwicki/krt2": {
-   "version": "0.7.1",
+   "version": "0.8.2",
    "version_source": "src/app.js",
-   "updated": "2026-11-16T09:43:19Z",
-   "pushed": "2026-11-16T09:43:21Z",
+   "updated": "2026-11-16T18:12:48Z",
+   "pushed": "2026-11-16T18:12:51Z",
    "commits": [
+    {
+     "date": "2026-11-16T18:12:48Z",
+     "msg": "Testanleitung Flug v4 (rollender Bereich, App 0.8.2)"
+    },
+    {
+     "date": "2026-11-16T18:12:00Z",
+     "msg": "0.8.2: Rollender Bereich der Reihe nach, im Editor freihaltbar; Belegungsstreifen"
+    },
+    {
+     "date": "2026-11-16T17:52:23Z",
+     "msg": "0.8.1: Feste Plätze in den Einstellungen am Handy sauber angeordnet"
+    },
+    {
+     "date": "2026-11-16T17:44:26Z",
+     "msg": "0.8.0: Rollender Bereich im Flug, Zugang Funkprotokoll in den Einstellungen"
+    },
     {
      "date": "2026-11-16T09:43:19Z",
      "msg": "README trägt seinen eigenen Dokumentstempel"
-    },
-    {
-     "date": "2026-11-16T09:35:33Z",
-     "msg": "README auf den Stand der App gebracht"
-    },
-    {
-     "date": "2026-11-16T09:28:19Z",
-     "msg": "0.7.1: Funkprotokoll schreibt nie über eine unlesbare Fahrtabelle"
-    },
-    {
-     "date": "2026-11-16T09:21:11Z",
-     "msg": "Funkprotokoll: die geteilte Fahrtabelle dokumentiert"
-    },
-    {
-     "date": "2026-11-16T08:18:34Z",
-     "msg": "0.7.0: Funkprotokoll – Frequenzwechsel und Aussendungen als VHF in gb_flight_data"
     }
    ]
   },
   "bwicki/analyze": {
    "version": "0.15.10",
    "version_source": "src/state.js",
-   "updated": "2026-10-31T14:19:29Z",
-   "pushed": "2026-10-31T14:19:31Z",
+   "updated": "2026-11-16T10:28:05Z",
+   "pushed": "2026-11-16T10:28:09Z",
    "commits": [
+    {
+     "date": "2026-11-16T10:28:05Z",
+     "msg": "Dokumentstempel im Titel"
+    },
     {
      "date": "2026-10-31T14:19:29Z",
      "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
@@ -246,10 +250,6 @@
     {
      "date": "2026-10-31T13:30:08Z",
      "msg": "0.15.8: Meldungen bleiben stehen – Kacheln mit Kopieren/Schliessen (Fehler bis zum Schliessen, Hinweise 7 s, gestapelt), Fenster «Meldungen»"
-    },
-    {
-     "date": "2026-10-31T13:20:35Z",
-     "msg": "0.15.8 (Teil 1): ops-Übergabe über Service-Binding OPS → briefing-api statt über die öffentliche workers.dev-Adresse; Diagnoseroute GET /api"
     }
    ]
   },
@@ -285,7 +285,7 @@
    "version": "0.3",
    "version_source": "src/version.js",
    "updated": "2026-10-31T14:19:33Z",
-   "pushed": "2026-11-15T10:53:38Z",
+   "pushed": "2026-11-16T11:17:45Z",
    "commits": [
     {
      "date": "2026-10-31T14:19:33Z",
@@ -368,9 +368,13 @@
   "bwicki/diashow": {
    "version": "1.9.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-05T06:13:48Z",
-   "pushed": "2026-11-05T06:13:50Z",
+   "updated": "2026-11-16T10:28:16Z",
+   "pushed": "2026-11-16T10:28:21Z",
    "commits": [
+    {
+     "date": "2026-11-16T10:28:16Z",
+     "msg": "Dokumentstempel im Titel"
+    },
     {
      "date": "2026-11-05T06:13:48Z",
      "msg": "1.9.0: Dia per Nummer verschieben (Feld unter dem Bildtext, auch für mehrere markierte Dias)"
@@ -386,10 +390,6 @@
     {
      "date": "2026-11-04T16:39:43Z",
      "msg": "1.7.1: Bildtext-Einstellungen sichtbar, Service Worker ohne veralteten Cache"
-    },
-    {
-     "date": "2026-11-04T16:21:55Z",
-     "msg": "1.7.0: Bildtext aus Aufnahmedaten (Ort/Datum/Zeit wählbar, nur EXIF, Ecke, ohne GPS), Schriftfarbe nach Helligkeit"
     }
    ]
   }
