@@ -1,5 +1,7 @@
 # Portal — Zugang zu allen Ballon-Apps
 
+**App 0.3.1 · README Dok. 261116-01**
+
 Einstiegsseite zu allen WebApps, die Balthasar Wicki für das Ballonfahren baut: nach
 Phase gegliedert (Vorbereitung, Fahrt, Nachbereitung, Windsonde S2/RR4, Vorträge und sonstiges),
 mit Statusleuchte, Version, Stand und «zuletzt benutzt» je App, Favoriten, Suche und «Neu & geändert». Zweisprachig DE/EN, ohne Kennwort

@@ -1,5 +1,7 @@
 # Einrichtung — einmalig, nur im Browser
 
+**App 0.3.1 · SETUP Dok. 261116-01**
+
 Die Seite selbst läuft sofort über GitHub Pages. Für die Statusleuchten braucht es den
 Cloudflare Worker `portal-api`; dafür zwei Secrets im Repository. Es sind **dieselben Werte**
 wie im Repository `bwicki/ops`.
