@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-17T03:50:09.737Z",
+ "generated": "2026-11-17T13:20:26.621Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-17T00:21:57Z",
-   "pushed": "2026-11-17T00:21:58Z",
+   "updated": "2026-11-17T08:14:28Z",
+   "pushed": "2026-11-17T08:14:30Z",
    "commits": [
+    {
+     "date": "2026-11-17T08:14:28Z",
+     "msg": "DWD-Berichte 2026-11-17 08:14 UTC"
+    },
     {
      "date": "2026-11-17T00:21:57Z",
      "msg": "DWD-Berichte 2026-11-17 00:21 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-11-15T23:56:16Z",
      "msg": "DWD-Berichte 2026-11-15 23:56 UTC"
-    },
-    {
-     "date": "2026-11-15T19:53:15Z",
-     "msg": "DWD-Berichte 2026-11-15 19:53 UTC"
     }
    ]
   },
@@ -116,9 +116,17 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-17T00:39:05Z",
-   "pushed": "2026-11-17T00:39:07Z",
+   "updated": "2026-11-17T08:48:05Z",
+   "pushed": "2026-11-17T08:48:07Z",
    "commits": [
+    {
+     "date": "2026-11-17T08:48:05Z",
+     "msg": "NOTAM 2026-11-17 08:48 UTC"
+    },
+    {
+     "date": "2026-11-17T07:45:00Z",
+     "msg": "DWD/METAR 2026-11-17 07:45 UTC"
+    },
     {
      "date": "2026-11-17T00:39:05Z",
      "msg": "NOTAM 2026-11-17 00:39 UTC"
@@ -130,14 +138,6 @@
     {
      "date": "2026-11-16T16:53:40Z",
      "msg": "NOTAM 2026-11-16 16:53 UTC"
-    },
-    {
-     "date": "2026-11-16T15:36:11Z",
-     "msg": "DWD/METAR 2026-11-16 15:36 UTC"
-    },
-    {
-     "date": "2026-11-16T10:28:09Z",
-     "msg": "Dokumentstempel im Titel"
     }
    ]
   },
@@ -198,11 +198,19 @@
    ]
   },
   "bwicki/krt2": {
-   "version": "0.8.2",
+   "version": "0.8.4",
    "version_source": "src/app.js",
-   "updated": "2026-11-16T18:12:48Z",
-   "pushed": "2026-11-16T18:12:51Z",
+   "updated": "2026-11-17T07:21:33Z",
+   "pushed": "2026-11-17T12:28:12Z",
    "commits": [
+    {
+     "date": "2026-11-17T07:21:33Z",
+     "msg": "0.8.4: Kompakte Liste 00–99 auf «Aktuell»; APP/ARR/DEP standardmässig aus"
+    },
+    {
+     "date": "2026-11-17T07:14:13Z",
+     "msg": "0.8.3: Blöcke in den Einstellungen am Handy als Karten"
+    },
     {
      "date": "2026-11-16T18:12:48Z",
      "msg": "Testanleitung Flug v4 (rollender Bereich, App 0.8.2)"
@@ -214,14 +222,6 @@
     {
      "date": "2026-11-16T17:52:23Z",
      "msg": "0.8.1: Feste Plätze in den Einstellungen am Handy sauber angeordnet"
-    },
-    {
-     "date": "2026-11-16T17:44:26Z",
-     "msg": "0.8.0: Rollender Bereich im Flug, Zugang Funkprotokoll in den Einstellungen"
-    },
-    {
-     "date": "2026-11-16T09:43:19Z",
-     "msg": "README trägt seinen eigenen Dokumentstempel"
     }
    ]
   },
@@ -285,7 +285,7 @@
    "version": "0.3",
    "version_source": "src/version.js",
    "updated": "2026-10-31T14:19:33Z",
-   "pushed": "2026-11-16T11:17:45Z",
+   "pushed": "2026-11-17T11:52:10Z",
    "commits": [
     {
      "date": "2026-10-31T14:19:33Z",
