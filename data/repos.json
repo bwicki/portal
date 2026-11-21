@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-21T01:30:28.135Z",
+ "generated": "2026-11-21T09:45:28.726Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-21T00:53:36Z",
-   "pushed": "2026-11-21T00:53:38Z",
+   "updated": "2026-11-21T08:13:43Z",
+   "pushed": "2026-11-21T08:13:44Z",
    "commits": [
+    {
+     "date": "2026-11-21T08:13:43Z",
+     "msg": "DWD-Berichte 2026-11-21 08:13 UTC"
+    },
     {
      "date": "2026-11-21T00:53:36Z",
      "msg": "DWD-Berichte 2026-11-21 00:53 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-11-20T03:02:20Z",
      "msg": "DWD-Berichte 2026-11-20 03:02 UTC"
-    },
-    {
-     "date": "2026-11-19T21:50:41Z",
-     "msg": "DWD-Berichte 2026-11-19 21:50 UTC"
     }
    ]
   },
@@ -116,9 +116,21 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-20T23:22:07Z",
-   "pushed": "2026-11-20T23:22:10Z",
+   "updated": "2026-11-21T09:12:15Z",
+   "pushed": "2026-11-21T09:12:18Z",
    "commits": [
+    {
+     "date": "2026-11-21T09:12:15Z",
+     "msg": "NOTAM 2026-11-21 09:12 UTC"
+    },
+    {
+     "date": "2026-11-21T04:05:31Z",
+     "msg": "DWD/METAR 2026-11-21 04:05 UTC"
+    },
+    {
+     "date": "2026-11-21T01:58:00Z",
+     "msg": "NOTAM 2026-11-21 01:58 UTC"
+    },
     {
      "date": "2026-11-20T23:22:07Z",
      "msg": "DWD/METAR 2026-11-20 23:22 UTC"
@@ -126,18 +138,6 @@
     {
      "date": "2026-11-20T20:38:53Z",
      "msg": "NOTAM 2026-11-20 20:38 UTC"
-    },
-    {
-     "date": "2026-11-20T17:43:12Z",
-     "msg": "DWD/METAR 2026-11-20 17:43 UTC"
-    },
-    {
-     "date": "2026-11-20T12:30:29Z",
-     "msg": "NOTAM 2026-11-20 12:30 UTC"
-    },
-    {
-     "date": "2026-11-20T08:50:11Z",
-     "msg": "DWD/METAR 2026-11-20 08:50 UTC"
     }
    ]
   },
@@ -282,30 +282,30 @@
    ]
   },
   "bwicki/s2ground": {
-   "version": "0.3",
+   "version": "0.4",
    "version_source": "src/version.js",
-   "updated": "2026-10-31T14:19:33Z",
-   "pushed": "2026-11-20T11:40:30Z",
+   "updated": "2026-11-21T09:25:54Z",
+   "pushed": "2026-11-21T09:25:55Z",
    "commits": [
+    {
+     "date": "2026-11-21T09:25:54Z",
+     "msg": "Admin «Benutzer hinzufügen»: Eingabefelder selbst unten ausgerichtet (Beschriftungen in eigener Zeile), unabhängig von Einblendungen eines P"
+    },
+    {
+     "date": "2026-11-21T09:17:22Z",
+     "msg": "Passwort ändern: eigener Name oben rechts öffnet den Dialog (aktuelles + neues Passwort); Masteruser setzt Passwörter je Benutzer"
+    },
+    {
+     "date": "2026-11-21T09:12:37Z",
+     "msg": "Admin: «Benutzer hinzufügen» – Felder, Masteruser-Haken und Knopf auf einer Zeile, unten ausgerichtet"
+    },
+    {
+     "date": "2026-11-21T09:08:21Z",
+     "msg": "Passwörter ab 4 Zeichen (kurze PINs); README: Masterpasswort zurücksetzen; Version 0.4"
+    },
     {
      "date": "2026-10-31T14:19:33Z",
      "msg": "Aufrufzähler für portal.wicki.aero eingebunden (hit.js, meldet nur die App-ID)"
-    },
-    {
-     "date": "2026-10-30T22:59:12Z",
-     "msg": "Ortsnamen «LL-Ort» (z. B. CH-Baden); Startort-Suche zeigt alle gleichnamigen Orte zur Auswahl; Version 0.3"
-    },
-    {
-     "date": "2026-10-28T18:02:25Z",
-     "msg": "Schritt 1: nach «Warnung ignorieren» keine zweite Rückfrage «Trotzdem weiter?» mehr"
-    },
-    {
-     "date": "2026-10-28T17:42:34Z",
-     "msg": "Design-Boards Login/Planen nachgezogen (kein Schnellstart auf der Anmeldeseite, blauer Knopf in Schritt 1, Version)"
-    },
-    {
-     "date": "2026-10-28T17:40:17Z",
-     "msg": "Schnellstart Schritt 2: Stepper-Zahl mittig, weniger Schriftgrössen (18/28/14), Abstand vor «Erneut laden»"
     }
    ]
   },
