@@ -1,12 +1,16 @@
 {
- "generated": "2026-11-27T08:23:46.373Z",
+ "generated": "2026-11-27T18:55:53.211Z",
  "repos": {
   "bwicki/gafor": {
    "version": "1.21.0",
    "version_source": "js/version.js",
-   "updated": "2026-11-27T08:12:42Z",
-   "pushed": "2026-11-27T08:12:43Z",
+   "updated": "2026-11-27T18:20:50Z",
+   "pushed": "2026-11-27T18:20:51Z",
    "commits": [
+    {
+     "date": "2026-11-27T18:20:50Z",
+     "msg": "DWD-Berichte 2026-11-27 18:20 UTC"
+    },
     {
      "date": "2026-11-27T08:12:42Z",
      "msg": "DWD-Berichte 2026-11-27 08:12 UTC"
@@ -22,10 +26,6 @@
     {
      "date": "2026-11-26T05:15:43Z",
      "msg": "DWD-Berichte 2026-11-26 05:15 UTC"
-    },
-    {
-     "date": "2026-11-25T23:11:47Z",
-     "msg": "DWD-Berichte 2026-11-25 23:11 UTC"
     }
    ]
   },
@@ -116,9 +116,21 @@
   "bwicki/ops": {
    "version": "0.14.3",
    "version_source": "js/version.js",
-   "updated": "2026-11-27T02:59:07Z",
-   "pushed": "2026-11-27T02:59:09Z",
+   "updated": "2026-11-27T18:41:00Z",
+   "pushed": "2026-11-27T18:41:03Z",
    "commits": [
+    {
+     "date": "2026-11-27T18:41:00Z",
+     "msg": "NOTAM 2026-11-27 18:41 UTC"
+    },
+    {
+     "date": "2026-11-27T12:00:32Z",
+     "msg": "DWD/METAR 2026-11-27 12:00 UTC"
+    },
+    {
+     "date": "2026-11-27T08:55:05Z",
+     "msg": "NOTAM 2026-11-27 08:55 UTC"
+    },
     {
      "date": "2026-11-27T02:59:07Z",
      "msg": "DWD/METAR 2026-11-27 02:59 UTC"
@@ -126,18 +138,6 @@
     {
      "date": "2026-11-27T00:18:30Z",
      "msg": "NOTAM 2026-11-27 00:18 UTC"
-    },
-    {
-     "date": "2026-11-26T20:19:29Z",
-     "msg": "DWD/METAR 2026-11-26 20:19 UTC"
-    },
-    {
-     "date": "2026-11-26T15:35:36Z",
-     "msg": "NOTAM 2026-11-26 15:35 UTC"
-    },
-    {
-     "date": "2026-11-26T11:15:57Z",
-     "msg": "DWD/METAR 2026-11-26 11:15 UTC"
     }
    ]
   },
@@ -201,7 +201,7 @@
    "version": "0.8.10",
    "version_source": "src/app.js",
    "updated": "2026-11-23T18:05:00Z",
-   "pushed": "2026-11-26T13:09:28Z",
+   "pushed": "2026-11-27T13:07:36Z",
    "commits": [
     {
      "date": "2026-11-23T18:05:00Z",
@@ -285,7 +285,7 @@
    "version": "0.4",
    "version_source": "src/version.js",
    "updated": "2026-11-22T09:26:22Z",
-   "pushed": "2026-11-26T12:34:42Z",
+   "pushed": "2026-11-27T12:20:21Z",
    "commits": [
     {
      "date": "2026-11-22T09:26:22Z",
